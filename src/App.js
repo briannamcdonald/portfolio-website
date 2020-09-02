@@ -1,11 +1,15 @@
 import React from "react";
+import { ThemeProvider } from "@material-ui/core/styles";
 import "./App.css";
+
+import NavBar from "./components/NavBar";
+import theme from "./theme";
 
 function App() {
   return (
-    <div>
-      <p>Hello World</p>
-    </div>
+    <ThemeProvider theme={theme}>
+      <NavBar />
+    </ThemeProvider>
   );
 }
 
