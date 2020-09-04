@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
   Toolbar,
@@ -11,51 +11,30 @@ import {
   List,
   ListItem,
   ListItemText,
-  Switch,
 } from "@material-ui/core";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
-import { blueGrey, cyan } from "@material-ui/core/colors";
 
 const NavBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [lightMode, changeColorMode] = useState(true);
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };
 
-  const handleSwitchChange = () => {
-    changeColorMode(!lightMode);
-  };
-
-  const StyledSwitch = withStyles({
-    switchBase: {
-      color: "white",
-      "&$checked": {
-        color: blueGrey[900],
-      },
-      "&$checked + $track": {
-        backgroundColor: blueGrey[900],
-      },
-    },
-    checked: {},
-    track: {},
-  })(Switch);
-
   const useStyles = makeStyles({
     appBar: {
-      background: lightMode ? "primary" : cyan[900],
-      color: lightMode ? "black" : "#eeeeee",
+      background: "primary",
+      color: "black",
     },
     drawerPaper: {
-      width: 240,
-      backgroundColor: lightMode ? "#eeeeee" : blueGrey[900],
-      color: lightMode ? "black" : "#eeeeee",
+      width: "80%",
+      backgroundColor: "#eeeeee",
+      color: "black",
     },
     button: {
       background: "inherit",
       borderRadius: 3,
-      color: lightMode ? "black" : "#eeeeee",
+      color: "black",
       height: 40,
       padding: "0 1rem",
       margin: "0 0.5rem",
@@ -79,27 +58,11 @@ const NavBar = () => {
       <Button className={classes.button}>About Me</Button>
       <Button className={classes.button}>Projects</Button>
       <Button className={classes.button}>Contact</Button>
-      <span style={{ marginLeft: "0.5rem" }}>
-        <StyledSwitch
-          size="small"
-          checked={!lightMode}
-          onChange={handleSwitchChange}
-          name="Color mode toggle"
-          inputProps={{ "aria-label": "Color mode toggle" }}
-        ></StyledSwitch>
-      </span>
     </div>
   );
 
   const sideDrawer = (
     <div style={{ display: "flex", marginLeft: "auto", alignItems: "center" }}>
-      <StyledSwitch
-        size="small"
-        checked={!lightMode}
-        onChange={handleSwitchChange}
-        name="Color mode toggle"
-        inputProps={{ "aria-label": "Color mode toggle" }}
-      ></StyledSwitch>
       <Drawer
         variant="temporary"
         classes={{
