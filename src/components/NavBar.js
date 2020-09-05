@@ -55,9 +55,13 @@ const NavBar = () => {
 
   const appBarButtons = (
     <div style={{ display: "flex", marginLeft: "auto", alignItems: "center" }}>
-      <Button className={classes.button}>About Me</Button>
+      <Button className={classes.button} href="#About">
+        About Me
+      </Button>
       <Button className={classes.button}>Projects</Button>
-      <Button className={classes.button}>Contact</Button>
+      <Button className={classes.button} href="#Contact">
+        Contact
+      </Button>
     </div>
   );
 

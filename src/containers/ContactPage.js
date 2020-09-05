@@ -11,12 +11,13 @@ const ContactPage = () => {
     columnDiv: {
       width: "100%",
       backgroundColor: "rgba(0, 0, 0, 0.92)",
-      position: "absolute",
+      position: "relative",
       bottom: "0",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      marginTop: "1rem",
     },
     rowDiv: {
       width: "100%",
@@ -37,7 +38,7 @@ const ContactPage = () => {
       width: "18rem",
       margin: "1rem",
       marginTop: "0",
-      height: "0.1rem",
+      height: "0.12rem",
     },
     emailText: {
       color: "#eeeeee",
@@ -65,7 +66,7 @@ const ContactPage = () => {
   const classes = useStyles();
 
   const icons = (
-    <Box className={classes.rowDiv}>
+    <Box className={classes.rowDiv} id="Contact">
       <IconButton
         className={classes.icon}
         aria-label="LinkedIn Link"
