@@ -1,6 +1,14 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core";
-import { Box, Typography, Link, IconButton, Divider } from "@material-ui/core";
+import {
+  Box,
+  Typography,
+  Link,
+  IconButton,
+  Divider,
+  Tooltip,
+  makeStyles,
+  Zoom,
+} from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -32,6 +40,7 @@ const ContactPage = () => {
       fontSize: "1.5rem",
       fontWeight: "bold",
       margin: "0.5rem",
+      textShadow: "0.1rem 0.1rem #4f4f4f",
     },
     divider: {
       backgroundColor: "#eeeeee",
@@ -67,29 +76,35 @@ const ContactPage = () => {
 
   const icons = (
     <Box className={classes.rowDiv} id="Contact">
-      <IconButton
-        className={classes.icon}
-        aria-label="LinkedIn Link"
-        onClick={() =>
-          window.open("https://www.linkedin.com/in/briannamcdonald/")
-        }
-      >
-        <LinkedInIcon className={classes.linkedIn} />
-      </IconButton>
-      <IconButton
-        className={classes.icon}
-        aria-label="GitHub link"
-        onClick={() => window.open("https://github.com/briannamcdonald/")}
-      >
-        <GitHubIcon className={classes.github} />
-      </IconButton>
-      <IconButton
-        className={classes.icon}
-        aria-label="Twitter link"
-        onClick={() => window.open("https://twitter.com/Brianna_Codes")}
-      >
-        <TwitterIcon className={classes.twitter} />
-      </IconButton>
+      <Tooltip title="LinkedIn" arrow TransitionComponent={Zoom}>
+        <IconButton
+          className={classes.icon}
+          aria-label="LinkedIn Link"
+          onClick={() =>
+            window.open("https://www.linkedin.com/in/briannamcdonald/")
+          }
+        >
+          <LinkedInIcon className={classes.linkedIn} />
+        </IconButton>
+      </Tooltip>
+      <Tooltip title="GitHub" arrow TransitionComponent={Zoom}>
+        <IconButton
+          className={classes.icon}
+          aria-label="GitHub link"
+          onClick={() => window.open("https://github.com/briannamcdonald/")}
+        >
+          <GitHubIcon className={classes.github} />
+        </IconButton>
+      </Tooltip>
+      <Tooltip title="Twitter" arrow TransitionComponent={Zoom}>
+        <IconButton
+          className={classes.icon}
+          aria-label="Twitter link"
+          onClick={() => window.open("https://twitter.com/Brianna_Codes")}
+        >
+          <TwitterIcon className={classes.twitter} />
+        </IconButton>
+      </Tooltip>
     </Box>
   );
 

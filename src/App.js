@@ -3,8 +3,9 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import "./App.css";
 
 import NavBar from "./components/NavBar";
-import ContactPage from "./containers/ContactPage";
-import AboutPage from "./containers/AboutPage";
+import ContactPage from "./components/ContactPage";
+import AboutPage from "./components/AboutPage";
+import Footer from "./components/Footer";
 import theme from "./themes/theme";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <AboutPage />
       <ContactPage />
+      <Footer />
     </ThemeProvider>
   );
 }

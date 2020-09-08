@@ -97,7 +97,7 @@ const NavBar = () => {
   );
 
   return (
-    <AppBar position="static" className={classes.appBar}>
+    <AppBar position="fixed" className={classes.appBar}>
       <Toolbar>
         <Typography variant="h6" className={classes.text}>
           Brianna McDonald
