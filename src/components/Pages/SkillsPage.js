@@ -11,7 +11,7 @@ import {
   Hidden,
   makeStyles,
 } from "@material-ui/core";
-import theme from "../themes/theme";
+import theme from "../../themes/theme";
 
 const SkillsPage = () => {
   const useStyles = makeStyles({
@@ -53,6 +53,7 @@ const SkillsPage = () => {
       color: "black",
       fontSize: "1.2rem",
       margin: "0.5rem",
+      marginBottom: "2rem",
     },
     icon: {
       color: "black",
@@ -65,7 +66,7 @@ const SkillsPage = () => {
     <div>
       <ListItem>
         <ListItemIcon className={classes.icon}>
-          <Icon className="devicon-python-plain" fontSize="inherit"></Icon>
+          <Icon className="devicon-python-plain" fontSize="inherit" />
         </ListItemIcon>
         <ListItemText
           primary="Python"
@@ -74,7 +75,7 @@ const SkillsPage = () => {
       </ListItem>
       <ListItem>
         <ListItemIcon className={classes.icon}>
-          <Icon className="devicon-java-plain" fontSize="inherit"></Icon>
+          <Icon className="devicon-java-plain" fontSize="inherit" />
         </ListItemIcon>
         <ListItemText
           primary="Java"
@@ -83,13 +84,13 @@ const SkillsPage = () => {
       </ListItem>
       <ListItem>
         <ListItemIcon className={classes.icon}>
-          <Icon className="devicon-c-plain" fontSize="inherit"></Icon>
+          <Icon className="devicon-c-plain" fontSize="inherit" />
         </ListItemIcon>
         <ListItemText primary="C" classes={{ primary: classes.listItemText }} />
       </ListItem>
       <ListItem>
         <ListItemIcon className={classes.icon}>
-          <Icon className="devicon-git-plain" fontSize="inherit"></Icon>
+          <Icon className="devicon-git-plain" fontSize="inherit" />
         </ListItemIcon>
         <ListItemText
           primary="Git"
@@ -99,11 +100,11 @@ const SkillsPage = () => {
       <ListItem>
         <ListItemIcon className={classes.icon}>
           <span
-            class="iconify"
+            className="iconify"
             data-icon="ion:terminal"
             data-inline="false"
             style={{ fontSize: "2rem" }}
-          ></span>
+          />
         </ListItemIcon>
         <ListItemText
           primary="Terminal"
@@ -113,11 +114,11 @@ const SkillsPage = () => {
       <ListItem>
         <ListItemIcon className={classes.icon}>
           <span
-            class="iconify"
+            className="iconify"
             data-icon="file-icons:vscode"
             data-inline="false"
             style={{ fontSize: "2rem" }}
-          ></span>
+          />
         </ListItemIcon>
         <ListItemText
           primary="VSCode"
@@ -138,10 +139,7 @@ const SkillsPage = () => {
           <List>
             <ListItem>
               <ListItemIcon className={classes.icon}>
-                <Icon
-                  className="devicon-react-original"
-                  fontSize="inherit"
-                ></Icon>
+                <Icon className="devicon-react-original" fontSize="inherit" />
               </ListItemIcon>
               <ListItemText
                 primary="Reactjs"
@@ -151,11 +149,11 @@ const SkillsPage = () => {
             <ListItem>
               <ListItemIcon className={classes.icon}>
                 <span
-                  class="iconify"
+                  className="iconify"
                   data-icon="simple-icons:redux"
                   data-inline="false"
                   style={{ fontSize: "2rem" }}
-                ></span>
+                />
               </ListItemIcon>
               <ListItemText
                 primary="Redux & React Hooks"
@@ -164,7 +162,7 @@ const SkillsPage = () => {
             </ListItem>
             <ListItem>
               <ListItemIcon className={classes.icon}>
-                <Icon className="devicon-html5-plain" fontSize="inherit"></Icon>
+                <Icon className="devicon-html5-plain" fontSize="inherit" />
               </ListItemIcon>
               <ListItemText
                 primary="HTML"
@@ -173,7 +171,7 @@ const SkillsPage = () => {
             </ListItem>
             <ListItem>
               <ListItemIcon className={classes.icon}>
-                <Icon className="devicon-css3-plain" fontSize="inherit"></Icon>
+                <Icon className="devicon-css3-plain" fontSize="inherit" />
               </ListItemIcon>
               <ListItemText
                 primary="CSS"
@@ -183,11 +181,11 @@ const SkillsPage = () => {
             <ListItem>
               <ListItemIcon className={classes.icon}>
                 <span
-                  class="iconify"
+                  className="iconify"
                   data-icon="simple-icons:material-ui"
                   data-inline="false"
                   style={{ fontSize: "2rem" }}
-                ></span>
+                />
               </ListItemIcon>
               <ListItemText
                 primary="Chakra UI & Material UI"

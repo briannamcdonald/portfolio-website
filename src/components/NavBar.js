@@ -21,13 +21,25 @@ const NavBar = () => {
     setDrawerOpen(!drawerOpen);
   };
 
+  const getLink = (input) => {
+    let words = input.split(" ");
+    let linkWords = [];
+    words.forEach((element) => {
+      linkWords.push(
+        element[0].toUpperCase() +
+          element.slice(1, element.length).toLowerCase()
+      );
+    });
+    return linkWords.join("");
+  };
+
   const useStyles = makeStyles({
     appBar: {
       background: "primary",
       color: "black",
     },
     drawerPaper: {
-      width: "80%",
+      width: "60%",
       backgroundColor: "#eeeeee",
       color: "black",
     },
@@ -55,10 +67,12 @@ const NavBar = () => {
 
   const appBarButtons = (
     <div style={{ display: "flex", marginLeft: "auto", alignItems: "center" }}>
-      <Button className={classes.button} href="#About">
+      <Button className={classes.button} href="#AboutMe">
         About Me
       </Button>
-      <Button className={classes.button}>Projects</Button>
+      <Button className={classes.button} href="#Projects">
+        Projects
+      </Button>
       <Button className={classes.button} href="#Contact">
         Contact
       </Button>
@@ -79,9 +93,14 @@ const NavBar = () => {
           keepMounted: true,
         }}
       >
-        <List>
+        <List onClick={handleDrawerToggle}>
           {["ABOUT ME", "PROJECTS", "CONTACT"].map((text, index) => (
-            <ListItem button key={text}>
+            <ListItem
+              button
+              component="a"
+              key={text}
+              href={"#" + getLink(text)}
+            >
               <ListItemText
                 primary={text}
                 classes={{ primary: classes.listItemText }}
