@@ -41,6 +41,9 @@ const Project = (props) => {
       margin: "0.5rem",
       backgroundColor: "#b2dfdb",
       boxShadow: "1px 1px 2px rgba(0, 0, 0, 0.3)",
+      "&:hover": {
+        backgroundColor: "#a9d4d0",
+      },
     },
     buttonDiv: {
       display: "flex",

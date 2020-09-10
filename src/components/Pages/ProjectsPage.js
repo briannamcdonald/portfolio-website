@@ -5,6 +5,7 @@ import theme from "../../themes/theme";
 import Project from "./../Project";
 import toDoListScreenshot from "./../../images/ToDoListScreenshot.png";
 import calculatorScreenshot from "./../../images/CalculatorScreenshot.png";
+import cssArtScreenshot from "./../../images/cssart.png";
 
 const ProjectsPage = () => {
   const useStyles = makeStyles({
@@ -98,6 +99,21 @@ const ProjectsPage = () => {
     </Box>
   );
 
+  const cssArtIcons = (
+    <Box className={classes.icons}>
+      <Icon
+        className="devicon-html5-plain"
+        fontSize="inherit"
+        style={{ margin: "0 0.3rem" }}
+      />
+      <Icon
+        className="devicon-css3-plain"
+        fontSize="inherit"
+        style={{ marginLeft: "0.3rem" }}
+      />
+    </Box>
+  );
+
   return (
     <Box className={classes.columnDiv} id="Projects">
       <Typography className={classes.titleText}>Projects</Typography>
@@ -119,6 +135,15 @@ const ProjectsPage = () => {
         imageTitle="Calculator screenshot"
         projectLink="https://briannamcdonald.github.io/react-calculator/"
         githubLink="https://github.com/briannamcdonald/react-calculator"
+      />
+      <Project
+        title="CSS Art"
+        icons={cssArtIcons}
+        description="A collection of drawings made with pure CSS and HTML."
+        image={cssArtScreenshot}
+        imageTitle="Screenshot of a CSS art drawing of Hello Kitty."
+        projectLink="https://codepen.io/collection/nJwkWd"
+        githubLink="https://github.com/briannamcdonald/css-art"
       />
       <Typography className={classes.bottomText}>More coming soon!</Typography>
     </Box>
