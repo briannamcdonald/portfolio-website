@@ -12,7 +12,7 @@ import {
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import theme from "../themes/theme";
+import theme from "../../themes/theme";
 
 const ContactPage = () => {
   const useStyles = makeStyles({

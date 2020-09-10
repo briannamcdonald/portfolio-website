@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Divider, Link, makeStyles } from "@material-ui/core";
-import theme from "../themes/theme";
-import picture from "./../images/picture.jpg";
+import theme from "../../themes/theme";
+import picture from "./../../images/picture.jpg";
 
 import SkillsPage from "./SkillsPage";
 
@@ -62,7 +62,7 @@ const AboutPage = () => {
       maxHeight: "100%",
       maxWidth: "100%",
       margin: "1rem",
-      marginBottom: "3rem",
+      marginBottom: "5rem",
       width: "40%",
       [theme.breakpoints.down("md")]: {
         width: "50%",
@@ -80,7 +80,7 @@ const AboutPage = () => {
 
   return (
     <div>
-      <Box className={classes.columnDiv} id="About">
+      <Box className={classes.columnDiv} id="AboutMe">
         <Typography className={classes.aboutTitle}>About Me</Typography>
         <Divider classes={{ root: classes.divider }} />
         <Typography className={classes.bodyText}>
@@ -92,9 +92,10 @@ const AboutPage = () => {
           quickly pick up on new technologies. <br /> <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I spend much of my
           free time working on programming projects and I have experience
-          working on a web development team as a front-end developer. I am
-          interested in gaining experience in developer roles of any kind. You
-          can find my resume {/* TODO - add link */}
+          working for a non-profit organization on a web development team as a
+          front-end developer. I am interested in gaining experience in
+          developer roles of any kind. You can find my resume{" "}
+          {/* TODO - add link */}
           <Link href="/" className={classes.link} underline="none">
             here
           </Link>{" "}
