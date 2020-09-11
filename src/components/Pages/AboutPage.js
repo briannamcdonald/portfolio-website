@@ -56,6 +56,7 @@ const AboutPage = () => {
       borderBottom: "1px solid #b2dfdb",
       "&:hover": {
         color: "#b2dfdb",
+        cursor: "pointer",
       },
     },
     picture: {
@@ -77,6 +78,11 @@ const AboutPage = () => {
     },
   });
   const classes = useStyles();
+
+  const scrollToContact = () => {
+    const element = document.getElementById("Contact");
+    element.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div>
@@ -100,7 +106,11 @@ const AboutPage = () => {
             here
           </Link>{" "}
           and my contact information and links{" "}
-          <Link href="#Contact" className={classes.link} underline="none">
+          <Link
+            onClick={scrollToContact}
+            className={classes.link}
+            underline="none"
+          >
             here
           </Link>
           .
