@@ -84,7 +84,7 @@ const AboutPage = () => {
         <Typography className={classes.aboutTitle}>About Me</Typography>
         <Divider classes={{ root: classes.divider }} />
         <Typography className={classes.bodyText}>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hi! My name is{" "}
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My name is{" "}
           <b>Brianna McDonald</b> and I am a third year Computer Science honours
           student at Memorial University. I really enjoy programmming and love
           to be always learning something new. I have a strong work ethic, as
