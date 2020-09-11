@@ -4,6 +4,7 @@ import theme from "../../themes/theme";
 
 import Project from "./../Project";
 import toDoListScreenshot from "./../../images/ToDoListScreenshot.png";
+import portfolioWebsiteScreenshot from "./../../images/PortfolioWebsiteScreenshot.png";
 import calculatorScreenshot from "./../../images/CalculatorScreenshot.png";
 import cssArtScreenshot from "./../../images/cssart.png";
 
@@ -43,74 +44,89 @@ const ProjectsPage = () => {
   });
   const classes = useStyles();
 
+  const reactIcon = (
+    <Icon
+      className="devicon-react-original"
+      fontSize="inherit"
+      style={{ marginRight: "0.3rem" }}
+    />
+  );
+
+  const reduxIcon = (
+    <span
+      className="iconify"
+      data-icon="simple-icons:redux"
+      data-inline="false"
+      style={{ fontSize: "1.5rem", margin: "0 0.3rem" }}
+    />
+  );
+
+  const javascriptIcon = (
+    <Icon
+      className="devicon-javascript-plain"
+      fontSize="inherit"
+      style={{ margin: "0 0.3rem" }}
+    />
+  );
+
+  const htmlIcon = (
+    <Icon
+      className="devicon-html5-plain"
+      fontSize="inherit"
+      style={{ margin: "0 0.3rem" }}
+    />
+  );
+
+  const cssIcon = (
+    <Icon
+      className="devicon-css3-plain"
+      fontSize="inherit"
+      style={{ margin: "0 0.3rem" }}
+    />
+  );
+
+  const materialUIIcon = (
+    <span
+      className="iconify"
+      data-icon="simple-icons:material-ui"
+      data-inline="false"
+      style={{ margin: "0 0.3rem" }}
+    />
+  );
+
   const toDoListIcons = (
     <Box className={classes.icons}>
-      <Icon
-        className="devicon-react-original"
-        fontSize="inherit"
-        style={{ marginRight: "0.3rem" }}
-      />
-      <span
-        className="iconify"
-        data-icon="simple-icons:redux"
-        data-inline="false"
-        style={{ fontSize: "1.5rem", margin: "0 0.3rem" }}
-      />
-      <Icon
-        className="devicon-javascript-plain"
-        fontSize="inherit"
-        style={{ margin: "0 0.3rem" }}
-      />
-      <Icon
-        className="devicon-html5-plain"
-        fontSize="inherit"
-        style={{ margin: "0 0.3rem" }}
-      />
-      <Icon
-        className="devicon-css3-plain"
-        fontSize="inherit"
-        style={{ marginLeft: "0.3rem" }}
-      />
+      {reactIcon}
+      {reduxIcon}
+      {javascriptIcon}
+      {htmlIcon}
+      {cssIcon}
+    </Box>
+  );
+
+  const portfolioWebsiteIcons = (
+    <Box className={classes.icons}>
+      {reactIcon}
+      {javascriptIcon}
+      {materialUIIcon}
+      {htmlIcon}
+      {cssIcon}
     </Box>
   );
 
   const calculatorIcons = (
     <Box className={classes.icons}>
-      <Icon
-        className="devicon-react-original"
-        fontSize="inherit"
-        style={{ marginRight: "0.3rem" }}
-      />
-      <Icon
-        className="devicon-javascript-plain"
-        fontSize="inherit"
-        style={{ margin: "0 0.3rem" }}
-      />
-      <Icon
-        className="devicon-html5-plain"
-        fontSize="inherit"
-        style={{ margin: "0 0.3rem" }}
-      />
-      <Icon
-        className="devicon-css3-plain"
-        fontSize="inherit"
-        style={{ marginLeft: "0.3rem" }}
-      />
+      {reactIcon}
+      {javascriptIcon}
+      {htmlIcon}
+      {cssIcon}
     </Box>
   );
 
   const cssArtIcons = (
     <Box className={classes.icons}>
-      <Icon
-        className="devicon-html5-plain"
-        fontSize="inherit"
-        style={{ margin: "0 0.3rem" }}
-      />
-      <Icon
-        className="devicon-css3-plain"
-        fontSize="inherit"
-        style={{ marginLeft: "0.3rem" }}
-      />
+      {htmlIcon}
+      {cssIcon}
     </Box>
   );
 
@@ -126,6 +142,15 @@ const ProjectsPage = () => {
         imageTitle="To-do List screenshot"
         projectLink="https://briannamcdonald.github.io/react-to-do-list/"
         githubLink="https://github.com/briannamcdonald/react-to-do-list"
+      />
+      <Project
+        title="Portfolio Website"
+        icons={portfolioWebsiteIcons}
+        description="This portfolio website, created to display my projects and skills as well as other information about me."
+        image={portfolioWebsiteScreenshot}
+        imageTitle="Portfolio website screenshot"
+        projectLink="https://briannamcdonald.github.io/portfolio-website/"
+        githubLink="https://github.com/briannamcdonald/portfolio-website"
       />
       <Project
         title="Calculator"
