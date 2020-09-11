@@ -15,24 +15,6 @@ import {
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 
 const NavBar = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    setDrawerOpen(!drawerOpen);
-  };
-
-  const getLink = (input) => {
-    let words = input.split(" ");
-    let linkWords = [];
-    words.forEach((element) => {
-      linkWords.push(
-        element[0].toUpperCase() +
-          element.slice(1, element.length).toLowerCase()
-      );
-    });
-    return linkWords.join("");
-  };
-
   const useStyles = makeStyles({
     appBar: {
       background: "primary",
@@ -65,15 +47,38 @@ const NavBar = () => {
   });
   const classes = useStyles();
 
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
+  const getLink = (input) => {
+    let words = input.split(" ");
+    let linkWords = [];
+    words.forEach((element) => {
+      linkWords.push(
+        element[0].toUpperCase() +
+          element.slice(1, element.length).toLowerCase()
+      );
+    });
+    return linkWords.join("");
+  };
+
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: "smooth" });
+  };
+
   const appBarButtons = (
     <div style={{ display: "flex", marginLeft: "auto", alignItems: "center" }}>
-      <Button className={classes.button} href="#AboutMe">
+      <Button className={classes.button} onClick={() => scrollTo("AboutMe")}>
         About Me
       </Button>
-      <Button className={classes.button} href="#Projects">
+      <Button className={classes.button} onClick={() => scrollTo("Projects")}>
         Projects
       </Button>
-      <Button className={classes.button} href="#Contact">
+      <Button className={classes.button} onClick={() => scrollTo("Contact")}>
         Contact
       </Button>
     </div>
