@@ -20,7 +20,8 @@ const FrontPage = () => {
       backgroundSize: "cover",
       [theme.breakpoints.down("xs")]: {
         backgroundImage: `url(${backgroundImage2})`,
-        backgroundPosition: "center center",
+        backgroundPosition: "left center",
+        backgroundAttachment: "scroll",
       },
     },
     name: {
