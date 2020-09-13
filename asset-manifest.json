@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.aa689918.chunk.css",
-    "main.js": "/portfolio-website/static/js/main.d60314cf.chunk.js",
-    "main.js.map": "/portfolio-website/static/js/main.d60314cf.chunk.js.map",
+    "main.js": "/portfolio-website/static/js/main.db26ea3a.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.db26ea3a.chunk.js.map",
     "runtime-main.js": "/portfolio-website/static/js/runtime-main.c16362e1.js",
     "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.c16362e1.js.map",
     "static/js/2.42d1d43b.chunk.js": "/portfolio-website/static/js/2.42d1d43b.chunk.js",
     "static/js/2.42d1d43b.chunk.js.map": "/portfolio-website/static/js/2.42d1d43b.chunk.js.map",
     "index.html": "/portfolio-website/index.html",
-    "precache-manifest.dc8142a347a36db98b9e202dfc0f87d4.js": "/portfolio-website/precache-manifest.dc8142a347a36db98b9e202dfc0f87d4.js",
+    "precache-manifest.dfc1d651fad3f19d3d5c01eebf7f0373.js": "/portfolio-website/precache-manifest.dfc1d651fad3f19d3d5c01eebf7f0373.js",
     "service-worker.js": "/portfolio-website/service-worker.js",
     "static/css/main.aa689918.chunk.css.map": "/portfolio-website/static/css/main.aa689918.chunk.css.map",
     "static/js/2.42d1d43b.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.42d1d43b.chunk.js.LICENSE.txt",
@@ -16,7 +16,7 @@
     "static/media/PortfolioWebsiteScreenshot.png": "/portfolio-website/static/media/PortfolioWebsiteScreenshot.87f2a7c8.png",
     "static/media/ToDoListScreenshot.png": "/portfolio-website/static/media/ToDoListScreenshot.6e533a6c.png",
     "static/media/background.png": "/portfolio-website/static/media/background.0fc4013d.png",
-    "static/media/background2.png": "/portfolio-website/static/media/background2.e02065d7.png",
+    "static/media/background2.jpg": "/portfolio-website/static/media/background2.32f21e92.jpg",
     "static/media/cssart.png": "/portfolio-website/static/media/cssart.670b9851.png",
     "static/media/picture.jpg": "/portfolio-website/static/media/picture.48fcca39.jpg"
   },
@@ -24,6 +24,6 @@
     "static/js/runtime-main.c16362e1.js",
     "static/js/2.42d1d43b.chunk.js",
     "static/css/main.aa689918.chunk.css",
-    "static/js/main.d60314cf.chunk.js"
+    "static/js/main.db26ea3a.chunk.js"
   ]
 }
