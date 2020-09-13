@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Divider, Icon, makeStyles } from "@material-ui/core";
-import theme from "../../themes/theme";
+import * as styles from "../../theme/commonStyles";
 
 import Project from "./../Project";
 import toDoListScreenshot from "./../../images/ToDoListScreenshot.png";
@@ -11,23 +11,22 @@ import cssArtScreenshot from "./../../images/cssart.png";
 const ProjectsPage = () => {
   const useStyles = makeStyles({
     columnDiv: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
+      ...styles.columnDiv,
     },
-    titleText: {
-      ...theme.typography.button,
-      fontSize: "1.5rem",
+    mainDiv: {
+      width: "auto",
+    },
+    headerText: {
+      ...styles.headerText,
+    },
+    projectText: {
       marginTop: "4rem",
-      textShadow: "0.1rem 0.1rem #b2dfdb",
     },
     divider: {
-      backgroundColor: "black",
-      width: "18rem",
-      margin: "1rem",
-      marginTop: "0",
-      height: "0.12rem",
+      ...styles.divider,
+    },
+    projectsDivider: {
+      paddingBottom: "0.15rem",
     },
     icons: {
       fontSize: "1.5rem",
@@ -131,9 +130,11 @@ const ProjectsPage = () => {
   );
 
   return (
-    <Box className={classes.columnDiv} id="Projects">
-      <Typography className={classes.titleText}>Projects</Typography>
-      <Divider className={classes.divider} />
+    <Box className={`${classes.columnDiv} ${classes.mainDiv}`} id="Projects">
+      <Typography className={`${classes.projectText} ${classes.headerText}`}>
+        Projects
+      </Typography>
+      <Divider className={`${classes.divider} ${classes.projectsDivider}`} />
       <Project
         title="To-Do List"
         icons={toDoListIcons}
