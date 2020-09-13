@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Typography, IconButton, makeStyles } from "@material-ui/core";
 import backgroundImage from "./../../images/background.png";
-import backgroundImage2 from "./../../images/background2.png";
-import theme from "./../../themes/theme";
+import backgroundImage2 from "./../../images/background2.jpg";
+import theme from "../../theme/theme";
 
 const FrontPage = () => {
   const useStyles = makeStyles({
