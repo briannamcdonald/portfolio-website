@@ -12,42 +12,35 @@ import {
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import theme from "../../themes/theme";
+import * as styles from "../../theme/commonStyles";
 
 const ContactPage = () => {
   const useStyles = makeStyles({
-    columnDiv: {
-      width: "100%",
+    mainDiv: {
       backgroundColor: "rgba(0, 0, 0, 0.92)",
       position: "relative",
       bottom: "0",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
       marginTop: "1rem",
     },
+    columnDiv: {
+      ...styles.columnDiv,
+    },
     rowDiv: {
-      width: "100%",
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "center",
-      alignItems: "center",
+      ...styles.rowDiv,
     },
     headerText: {
-      ...theme.typography.button,
+      ...styles.headerText,
+    },
+    contactText: {
       color: "#eeeeee",
-      fontSize: "1.5rem",
-      fontWeight: "bold",
       margin: "0.5rem",
-      textShadow: "0.1rem 0.1rem #4f4f4f",
+      textShadow: "0.12rem 0.12rem #4f4f4f",
     },
     divider: {
+      ...styles.divider,
+    },
+    contactDivider: {
       backgroundColor: "#eeeeee",
-      width: "18rem",
-      margin: "1rem",
-      marginTop: "0",
-      height: "0.12rem",
     },
     emailText: {
       color: "#eeeeee",
@@ -109,9 +102,13 @@ const ContactPage = () => {
   );
 
   return (
-    <Box className={classes.columnDiv}>
-      <Typography className={classes.headerText}>Contact Me</Typography>
-      <Divider classes={{ root: classes.divider }} />
+    <Box className={`${classes.columnDiv} ${classes.mainDiv}`}>
+      <Typography className={`${classes.headerText} ${classes.contactText}`}>
+        Contact Me
+      </Typography>
+      <Divider
+        classes={{ root: `${classes.divider} ${classes.contactDivider}` }}
+      />
       <Box className={classes.rowDiv}>
         <Typography className={classes.emailText}>
           Email:&nbsp;&nbsp;&nbsp;&nbsp;

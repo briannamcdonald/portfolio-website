@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Divider, Link, makeStyles } from "@material-ui/core";
-import theme from "../../themes/theme";
+import theme from "../../theme/theme";
+import * as styles from "../../theme/commonStyles";
 import picture from "./../../images/picture.jpg";
 
 import SkillsPage from "./SkillsPage";
@@ -8,6 +9,9 @@ import SkillsPage from "./SkillsPage";
 const AboutPage = () => {
   const useStyles = makeStyles({
     columnDiv: {
+      ...styles.columnDiv,
+    },
+    mainDiv: {
       width: "60%",
       [theme.breakpoints.down("sm")]: {
         width: "80%",
@@ -15,31 +19,16 @@ const AboutPage = () => {
       [theme.breakpoints.down("xs")]: {
         width: "90%",
       },
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
       margin: "0 auto",
     },
-    rowDiv: {
-      width: "70%",
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
+    headerText: {
+      ...styles.headerText,
     },
-    aboutTitle: {
-      ...theme.typography.button,
-      fontSize: "1.5rem",
+    aboutText: {
       marginTop: "6rem",
-      textShadow: "0.1rem 0.1rem #b2dfdb",
     },
     divider: {
-      backgroundColor: "black",
-      width: "18rem",
-      margin: "1rem",
-      marginTop: "0",
-      height: "0.12rem",
+      ...styles.divider,
     },
     bodyText: {
       fontSize: "1.1rem",
@@ -86,8 +75,10 @@ const AboutPage = () => {
 
   return (
     <div>
-      <Box className={classes.columnDiv} id="AboutMe">
-        <Typography className={classes.aboutTitle}>About Me</Typography>
+      <Box className={`${classes.columnDiv} ${classes.mainDiv}`} id="AboutMe">
+        <Typography className={`${classes.aboutText} ${classes.headerText}`}>
+          About Me
+        </Typography>
         <Divider classes={{ root: classes.divider }} />
         <Typography className={classes.bodyText}>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My name is{" "}

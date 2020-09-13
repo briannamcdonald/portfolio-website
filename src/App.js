@@ -8,7 +8,7 @@ import AboutPage from "./components/Pages/AboutPage";
 import ContactPage from "./components/Pages/ContactPage";
 import ProjectsPage from "./components/Pages/ProjectsPage";
 import Footer from "./components/Footer";
-import theme from "./themes/theme";
+import theme from "./theme/theme";
 
 function App() {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, IconButton, makeStyles } from "@material-ui/core";
 import backgroundImage from "./../../images/background.png";
 import backgroundImage2 from "./../../images/background2.png";
-import theme from "./../../themes/theme";
+import theme from "../../theme/theme";
 
 const FrontPage = () => {
   const useStyles = makeStyles({
@@ -30,7 +30,7 @@ const FrontPage = () => {
       margin: "0.5rem 1rem",
       fontWeight: "bold",
       [theme.breakpoints.down("xs")]: {
-        top: "5rem",
+        top: "4rem",
         fontSize: "3.4rem",
       },
     },
@@ -39,7 +39,7 @@ const FrontPage = () => {
       top: "6rem",
       margin: "0 1.4rem",
       [theme.breakpoints.down("xs")]: {
-        top: "5rem",
+        top: "4rem",
         fontSize: "2.5rem",
       },
     },
@@ -48,7 +48,7 @@ const FrontPage = () => {
       top: "6rem",
       margin: "0 1.4rem",
       [theme.breakpoints.down("xs")]: {
-        top: "5rem",
+        top: "4rem",
         fontSize: "1.2rem",
       },
     },
@@ -57,7 +57,7 @@ const FrontPage = () => {
       top: "9rem",
       fontSize: "3.75rem",
       [theme.breakpoints.down("xs")]: {
-        top: "7rem",
+        top: "6rem",
         fontSize: "3.5rem",
       },
     },

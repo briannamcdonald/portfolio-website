@@ -10,7 +10,7 @@ import {
   CardMedia,
   makeStyles,
 } from "@material-ui/core";
-import theme from "./../themes/theme";
+import theme from "../theme/theme";
 
 const Project = (props) => {
   const useStyles = makeStyles({

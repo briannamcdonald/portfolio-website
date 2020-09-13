@@ -11,39 +11,31 @@ import {
   Hidden,
   makeStyles,
 } from "@material-ui/core";
-import theme from "../../themes/theme";
+import * as styles from "../../theme/commonStyles";
 
 const SkillsPage = () => {
   const useStyles = makeStyles({
     columnDiv: {
+      ...styles.columnDiv,
+    },
+    mainDiv: {
       backgroundColor: "#e8e8e8",
-      width: "100%",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
       margin: "0 auto",
     },
     rowDiv: {
+      ...styles.rowDiv,
+    },
+    rowDivider: {
       width: "70%",
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
     },
     divider: {
-      backgroundColor: "black",
-      width: "18rem",
-      margin: "1rem",
-      marginTop: "0",
-      height: "0.12rem",
+      ...styles.divider,
     },
-    skillsTitle: {
-      ...theme.typography.button,
-      color: "black",
-      fontSize: "1.5rem",
+    headerText: {
+      ...styles.headerText,
+    },
+    skillsText: {
       marginTop: "2rem",
-      textShadow: "0.1rem 0.1rem #b2dfdb",
     },
     listItemText: {
       color: "black",
@@ -129,12 +121,15 @@ const SkillsPage = () => {
   );
 
   return (
-    <Box className={classes.columnDiv}>
-      <Typography className={classes.skillsTitle} align="center">
+    <Box className={`${classes.columnDiv} ${classes.mainDiv}`}>
+      <Typography
+        className={`${classes.skillsText} ${classes.headerText}`}
+        align="center"
+      >
         My Skills & <br /> Technologies
       </Typography>
       <Divider classes={{ root: classes.divider }} />
-      <Box className={classes.rowDiv}>
+      <Box className={`${classes.rowDiv} ${classes.rowDivider}`}>
         <Box className={classes.columnDiv}>
           <List>
             <ListItem>
