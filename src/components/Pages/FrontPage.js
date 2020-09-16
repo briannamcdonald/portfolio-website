@@ -7,7 +7,7 @@ import {
   Hidden,
   makeStyles,
 } from "@material-ui/core";
-import backgroundImage from "./../../images/background.png";
+import backgroundImage from "./../../images/background.jpg";
 import backgroundImage2 from "./../../images/background2.jpg";
 import theme from "../../theme/theme";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
