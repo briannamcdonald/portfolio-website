@@ -1,8 +1,16 @@
 import React from "react";
-import { Box, Typography, IconButton, makeStyles } from "@material-ui/core";
+import {
+  Box,
+  Typography,
+  IconButton,
+  Fab,
+  Hidden,
+  makeStyles,
+} from "@material-ui/core";
 import backgroundImage from "./../../images/background.png";
 import backgroundImage2 from "./../../images/background2.jpg";
 import theme from "../../theme/theme";
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 const FrontPage = () => {
   const useStyles = makeStyles({
@@ -16,7 +24,7 @@ const FrontPage = () => {
       backgroundImage: `url(${backgroundImage})`,
       backgroundPosition: "center top",
       backgroundRepeat: "no-repeat",
-      backgroundAttachment: "fixed",
+      backgroundAttachment: "scroll",
       backgroundSize: "cover",
       [theme.breakpoints.down("xs")]: {
         backgroundImage: `url(${backgroundImage2})`,
@@ -61,16 +69,23 @@ const FrontPage = () => {
         fontSize: "3.5rem",
       },
     },
+    backToTopButton: {
+      position: "fixed",
+      bottom: "0",
+      right: "0",
+      margin: "1rem",
+      zIndex: "99999",
+    },
   });
   const classes = useStyles();
 
-  const scrollToAbout = () => {
-    const element = document.getElementById("AboutMe");
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
     element.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <Box className={classes.background}>
+    <Box className={classes.background} id="Top">
       <Typography className={classes.topText} variant="h3" align="center">
         Hi, my name is
       </Typography>
@@ -83,7 +98,7 @@ const FrontPage = () => {
       <IconButton
         className={classes.button}
         aria-label="Scroll Down"
-        onClick={scrollToAbout}
+        onClick={() => scrollTo("AboutMe")}
       >
         <span
           className="iconify"
@@ -91,6 +106,28 @@ const FrontPage = () => {
           data-inline="false"
         />
       </IconButton>
+      <Hidden xsDown>
+        <Fab
+          className={classes.backToTopButton}
+          variant="extended"
+          size="small"
+          aria-label="Back to Top"
+          onClick={() => scrollTo("Top")}
+        >
+          <KeyboardArrowUpIcon />
+          Back to Top
+        </Fab>
+      </Hidden>
+      <Hidden smUp>
+        <Fab
+          className={classes.backToTopButton}
+          size="small"
+          aria-label="Back to Top"
+          onClick={() => scrollTo("Top")}
+        >
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </Hidden>
     </Box>
   );
 };

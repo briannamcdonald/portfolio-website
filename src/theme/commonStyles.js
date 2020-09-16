@@ -18,9 +18,9 @@ export const rowDiv = {
 
 export const headerText = {
   ...theme.typography.button,
-  fontSize: "1.5rem",
+  fontSize: "1.8rem",
   fontWeight: "bold",
-  textShadow: "0.12rem 0.12rem #b2dfdb",
+  textShadow: "0.1rem 0.1rem 0.1rem rgba(178, 223, 219, 0.8)",
 };
 
 export const divider = {

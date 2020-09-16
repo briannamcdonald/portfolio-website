@@ -3,10 +3,10 @@ import { Box, Typography, Divider, Icon, makeStyles } from "@material-ui/core";
 import * as styles from "../../theme/commonStyles";
 
 import Project from "./../Project";
-import toDoListScreenshot from "./../../images/ToDoListScreenshot.png";
-import portfolioWebsiteScreenshot from "./../../images/PortfolioWebsiteScreenshot.png";
-import calculatorScreenshot from "./../../images/CalculatorScreenshot.png";
-import cssArtScreenshot from "./../../images/cssart.png";
+import toDoListScreenshot from "./../../images/ToDoListScreenshot.jpg";
+import portfolioWebsiteScreenshot from "./../../images/PortfolioWebsiteScreenshot.jpg";
+import calculatorScreenshot from "./../../images/CalculatorScreenshot.jpg";
+import cssArtScreenshot from "./../../images/cssart.jpg";
 
 const ProjectsPage = () => {
   const useStyles = makeStyles({
@@ -20,7 +20,7 @@ const ProjectsPage = () => {
       ...styles.headerText,
     },
     projectText: {
-      marginTop: "4rem",
+      marginTop: "5rem",
     },
     divider: {
       ...styles.divider,
@@ -34,12 +34,6 @@ const ProjectsPage = () => {
       width: "100%",
       margin: "0.5rem 0",
     },
-    bottomText: {
-      color: "black",
-      fontSize: "1.2rem",
-      fontWeight: "bold",
-      margin: "1rem",
-    },
   });
   const classes = useStyles();
 
@@ -47,7 +41,7 @@ const ProjectsPage = () => {
     <Icon
       className="devicon-react-original"
       fontSize="inherit"
-      style={{ marginRight: "0.3rem" }}
+      style={{ marginRight: "0.35rem" }}
     />
   );
 
@@ -56,7 +50,7 @@ const ProjectsPage = () => {
       className="iconify"
       data-icon="simple-icons:redux"
       data-inline="false"
-      style={{ fontSize: "1.5rem", margin: "0 0.3rem" }}
+      style={{ fontSize: "1.5rem", margin: "0 0.35rem" }}
     />
   );
 
@@ -64,7 +58,7 @@ const ProjectsPage = () => {
     <Icon
       className="devicon-javascript-plain"
       fontSize="inherit"
-      style={{ margin: "0 0.3rem" }}
+      style={{ margin: "0 0.35rem" }}
     />
   );
 
@@ -72,7 +66,7 @@ const ProjectsPage = () => {
     <Icon
       className="devicon-html5-plain"
       fontSize="inherit"
-      style={{ margin: "0 0.3rem" }}
+      style={{ margin: "0 0.35rem" }}
     />
   );
 
@@ -80,7 +74,7 @@ const ProjectsPage = () => {
     <Icon
       className="devicon-css3-plain"
       fontSize="inherit"
-      style={{ margin: "0 0.3rem" }}
+      style={{ margin: "0 0.35rem" }}
     />
   );
 
@@ -89,7 +83,7 @@ const ProjectsPage = () => {
       className="iconify"
       data-icon="simple-icons:material-ui"
       data-inline="false"
-      style={{ margin: "0 0.3rem" }}
+      style={{ margin: "0 0.35rem" }}
     />
   );
 
@@ -124,7 +118,11 @@ const ProjectsPage = () => {
 
   const cssArtIcons = (
     <Box className={classes.icons}>
-      {htmlIcon}
+      <Icon
+        className="devicon-html5-plain"
+        fontSize="inherit"
+        style={{ marginRight: "0.35rem" }}
+      />
       {cssIcon}
     </Box>
   );
@@ -171,7 +169,6 @@ const ProjectsPage = () => {
         projectLink="https://codepen.io/collection/nJwkWd"
         githubLink="https://github.com/briannamcdonald/css-art"
       />
-      <Typography className={classes.bottomText}>More coming soon!</Typography>
     </Box>
   );
 };

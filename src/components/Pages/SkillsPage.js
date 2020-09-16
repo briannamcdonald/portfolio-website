@@ -11,6 +11,7 @@ import {
   Hidden,
   makeStyles,
 } from "@material-ui/core";
+import theme from "./../../theme/theme";
 import * as styles from "../../theme/commonStyles";
 
 const SkillsPage = () => {
@@ -26,7 +27,10 @@ const SkillsPage = () => {
       ...styles.rowDiv,
     },
     rowDivider: {
-      width: "70%",
+      width: "50%",
+      [theme.breakpoints.down("sm")]: {
+        width: "70%",
+      },
     },
     divider: {
       ...styles.divider,
@@ -40,6 +44,7 @@ const SkillsPage = () => {
     listItemText: {
       color: "black",
       fontSize: "1.2rem",
+      margin: "0 1rem",
     },
     bottomText: {
       color: "black",
@@ -187,10 +192,10 @@ const SkillsPage = () => {
                 classes={{ primary: classes.listItemText }}
               />
             </ListItem>
-            <Hidden smUp>{secondHalfList}</Hidden>
+            <Hidden mdUp>{secondHalfList}</Hidden>
           </List>
         </Box>
-        <Hidden xsDown>
+        <Hidden smDown>
           <Box className={classes.columnDiv}>
             <List>{secondHalfList}</List>
           </Box>
