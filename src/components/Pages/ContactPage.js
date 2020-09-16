@@ -20,7 +20,7 @@ const ContactPage = () => {
       backgroundColor: "rgba(0, 0, 0, 0.92)",
       position: "relative",
       bottom: "0",
-      marginTop: "1rem",
+      marginTop: "5rem",
     },
     columnDiv: {
       ...styles.columnDiv,
@@ -34,7 +34,7 @@ const ContactPage = () => {
     contactText: {
       color: "#eeeeee",
       margin: "0.5rem",
-      textShadow: "0.12rem 0.12rem #4f4f4f",
+      textShadow: "0.1rem 0.1rem #4f4f4f",
     },
     divider: {
       ...styles.divider,

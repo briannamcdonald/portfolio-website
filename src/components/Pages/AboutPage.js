@@ -36,7 +36,7 @@ const AboutPage = () => {
       maxWidth: "100%",
       maxHeight: "100%",
       margin: "1rem",
-      lineHeight: "2rem",
+      lineHeight: "1.6rem",
     },
     link: {
       color: "black",
@@ -52,7 +52,7 @@ const AboutPage = () => {
       maxHeight: "100%",
       maxWidth: "100%",
       margin: "1rem",
-      marginBottom: "5rem",
+      marginBottom: "6rem",
       width: "40%",
       [theme.breakpoints.down("md")]: {
         width: "50%",
@@ -81,28 +81,20 @@ const AboutPage = () => {
         </Typography>
         <Divider classes={{ root: classes.divider }} />
         <Typography className={classes.bodyText}>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My name is{" "}
-          <b>Brianna McDonald</b> and I am a third year Computer Science honours
-          student at Memorial University. I really enjoy programmming and love
-          to be always learning something new. I have a strong work ethic, as
-          shown by my 4.0 GPA achieved in my first two years of study, and can
-          quickly pick up on new technologies. <br /> <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I spend much of my
-          free time working on programming projects and I have experience
-          working for a non-profit organization on a web development team as a
-          front-end developer. I am interested in gaining experience in
-          developer roles of any kind. You can find my resume{" "}
-          {/* TODO - add link */}
-          <Link href="/" className={classes.link} underline="none">
-            here
-          </Link>{" "}
-          and my contact information and links{" "}
+          My name is <b>Brianna McDonald</b> and I am a third year Computer
+          Science honours student at Memorial University living in Newfoundland,
+          Canada. <br /> <br /> I really enjoy programmming and love to be
+          always learning something new. I have a strong work ethic, as shown by
+          my 4.0 GPA, and can quickly pick up on new technologies. <br /> <br />{" "}
+          In my spare time I work on a web development team as a front-end
+          developer for a non-profit organization and also work on my own
+          programming projects. You can find my {/* TODO - add resume link */}{" "}
           <Link
             onClick={scrollToContact}
             className={classes.link}
             underline="none"
           >
-            here
+            contact information and links here
           </Link>
           .
         </Typography>
