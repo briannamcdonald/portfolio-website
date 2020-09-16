@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.239fc7fd.chunk.css",
-    "main.js": "/portfolio-website/static/js/main.d8529d80.chunk.js",
-    "main.js.map": "/portfolio-website/static/js/main.d8529d80.chunk.js.map",
+    "main.js": "/portfolio-website/static/js/main.df1470ef.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.df1470ef.chunk.js.map",
     "runtime-main.js": "/portfolio-website/static/js/runtime-main.c16362e1.js",
     "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.c16362e1.js.map",
     "static/js/2.0e7e970a.chunk.js": "/portfolio-website/static/js/2.0e7e970a.chunk.js",
     "static/js/2.0e7e970a.chunk.js.map": "/portfolio-website/static/js/2.0e7e970a.chunk.js.map",
     "index.html": "/portfolio-website/index.html",
-    "precache-manifest.ba312337b46ca260db895178ed8ff315.js": "/portfolio-website/precache-manifest.ba312337b46ca260db895178ed8ff315.js",
+    "precache-manifest.fbef5b31c5e8283cc58a71d055b1c241.js": "/portfolio-website/precache-manifest.fbef5b31c5e8283cc58a71d055b1c241.js",
     "service-worker.js": "/portfolio-website/service-worker.js",
     "static/css/main.239fc7fd.chunk.css.map": "/portfolio-website/static/css/main.239fc7fd.chunk.css.map",
     "static/js/2.0e7e970a.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.0e7e970a.chunk.js.LICENSE.txt",
-    "static/media/CalculatorScreenshot.jpg": "/portfolio-website/static/media/CalculatorScreenshot.1522875e.jpg",
-    "static/media/PortfolioWebsiteScreenshot.jpg": "/portfolio-website/static/media/PortfolioWebsiteScreenshot.87f2a7c8.jpg",
-    "static/media/ToDoListScreenshot.jpg": "/portfolio-website/static/media/ToDoListScreenshot.6e533a6c.jpg",
-    "static/media/background.png": "/portfolio-website/static/media/background.0fc4013d.png",
-    "static/media/background2.jpg": "/portfolio-website/static/media/background2.32f21e92.jpg",
-    "static/media/cssart.jpg": "/portfolio-website/static/media/cssart.670b9851.jpg",
-    "static/media/picture.jpg": "/portfolio-website/static/media/picture.48fcca39.jpg"
+    "static/media/CalculatorScreenshot.jpg": "/portfolio-website/static/media/CalculatorScreenshot.1da56b4f.jpg",
+    "static/media/PortfolioWebsiteScreenshot.jpg": "/portfolio-website/static/media/PortfolioWebsiteScreenshot.7659e13e.jpg",
+    "static/media/ToDoListScreenshot.jpg": "/portfolio-website/static/media/ToDoListScreenshot.497599d7.jpg",
+    "static/media/background.jpg": "/portfolio-website/static/media/background.cb184cd7.jpg",
+    "static/media/background2.jpg": "/portfolio-website/static/media/background2.6d4d0b34.jpg",
+    "static/media/cssart.jpg": "/portfolio-website/static/media/cssart.949a49b4.jpg",
+    "static/media/picture.jpg": "/portfolio-website/static/media/picture.6f7de017.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c16362e1.js",
     "static/js/2.0e7e970a.chunk.js",
     "static/css/main.239fc7fd.chunk.css",
-    "static/js/main.d8529d80.chunk.js"
+    "static/js/main.df1470ef.chunk.js"
   ]
 }
