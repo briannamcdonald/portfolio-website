@@ -62,7 +62,7 @@ const ContactPage = () => {
       fontSize: "2.7rem",
     },
     twitter: {
-      fontSize: "2.5rem",
+      fontSize: "2.6rem",
     },
   });
   const classes = useStyles();
@@ -96,6 +96,15 @@ const ContactPage = () => {
           onClick={() => window.open("https://twitter.com/Brianna_Codes")}
         >
           <TwitterIcon className={classes.twitter} />
+        </IconButton>
+      </Tooltip>
+      <Tooltip title="CodePen" arrow TransitionComponent={Zoom}>
+        <IconButton
+          className={classes.icon}
+          aria-label="CodePen link"
+          onClick={() => window.open("https://codepen.io/briannamcdonald")}
+        >
+          <span className="iconify" data-icon="ant-design:codepen-outlined" data-inline="false" style={{ fontSize: "2.8rem" }} />
         </IconButton>
       </Tooltip>
     </Box>
