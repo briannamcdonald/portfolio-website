@@ -76,6 +76,10 @@ const FrontPage = () => {
       margin: "1rem",
       zIndex: "99999",
     },
+    backToTopButtonMobile: {
+      margin: "0.8rem",
+      marginBottom: "4rem",
+    }
   });
   const classes = useStyles();
 
@@ -120,7 +124,7 @@ const FrontPage = () => {
       </Hidden>
       <Hidden smUp>
         <Fab
-          className={classes.backToTopButton}
+          className={`${classes.backToTopButton} ${classes.backToTopButtonMobile}`}
           size="small"
           aria-label="Back to Top"
           onClick={() => scrollTo("Top")}

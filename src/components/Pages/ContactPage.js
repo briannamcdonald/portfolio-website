@@ -12,6 +12,7 @@ import {
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import theme from "../../theme/theme";
 import * as styles from "../../theme/commonStyles";
 
 const ContactPage = () => {
@@ -54,6 +55,9 @@ const ContactPage = () => {
     icon: {
       color: "#eeeeee",
       margin: "0.5rem",
+      [theme.breakpoints.down("sm")]: {
+        margin: "0.1rem"
+      },
     },
     github: {
       fontSize: "2.2rem",
@@ -89,15 +93,6 @@ const ContactPage = () => {
           <GitHubIcon className={classes.github} />
         </IconButton>
       </Tooltip>
-      <Tooltip title="Twitter" arrow TransitionComponent={Zoom}>
-        <IconButton
-          className={classes.icon}
-          aria-label="Twitter link"
-          onClick={() => window.open("https://twitter.com/Brianna_Codes")}
-        >
-          <TwitterIcon className={classes.twitter} />
-        </IconButton>
-      </Tooltip>
       <Tooltip title="CodePen" arrow TransitionComponent={Zoom}>
         <IconButton
           className={classes.icon}
@@ -105,6 +100,15 @@ const ContactPage = () => {
           onClick={() => window.open("https://codepen.io/briannamcdonald")}
         >
           <span className="iconify" data-icon="ant-design:codepen-outlined" data-inline="false" style={{ fontSize: "2.8rem" }} />
+        </IconButton>
+      </Tooltip>
+      <Tooltip title="Twitter" arrow TransitionComponent={Zoom}>
+        <IconButton
+          className={classes.icon}
+          aria-label="Twitter link"
+          onClick={() => window.open("https://twitter.com/Brianna_Codes")}
+        >
+          <TwitterIcon className={classes.twitter} />
         </IconButton>
       </Tooltip>
     </Box>
