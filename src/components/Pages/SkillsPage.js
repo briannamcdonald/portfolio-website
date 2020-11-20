@@ -22,6 +22,7 @@ const SkillsPage = () => {
     mainDiv: {
       backgroundColor: "#e8e8e8",
       margin: "0 auto",
+      paddingBottom: "1rem",
     },
     rowDiv: {
       ...styles.rowDiv,
@@ -45,12 +46,6 @@ const SkillsPage = () => {
       color: "black",
       fontSize: "1.2rem",
       margin: "0 1rem",
-    },
-    bottomText: {
-      color: "black",
-      fontSize: "1.2rem",
-      margin: "0.5rem",
-      marginBottom: "2rem",
     },
     icon: {
       color: "black",
@@ -162,6 +157,15 @@ const SkillsPage = () => {
             </ListItem>
             <ListItem>
               <ListItemIcon className={classes.icon}>
+                <Icon className="devicon-javascript-plain" fontSize="inherit" />
+              </ListItemIcon>
+              <ListItemText
+                primary="JavaScript"
+                classes={{ primary: classes.listItemText }}
+              />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon className={classes.icon}>
                 <Icon className="devicon-html5-plain" fontSize="inherit" />
               </ListItemIcon>
               <ListItemText
@@ -201,10 +205,6 @@ const SkillsPage = () => {
           </Box>
         </Hidden>
       </Box>
-      <Typography align="center" className={classes.bottomText}>
-        <span style={{ fontWeight: "bold" }}>Currently learning: </span>
-        JavaScript
-      </Typography>
     </Box>
   );
 };

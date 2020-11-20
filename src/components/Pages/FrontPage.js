@@ -78,7 +78,7 @@ const FrontPage = () => {
     },
     backToTopButtonMobile: {
       margin: "0.8rem",
-      marginBottom: "4rem",
+      marginBottom: "3rem",
     }
   });
   const classes = useStyles();

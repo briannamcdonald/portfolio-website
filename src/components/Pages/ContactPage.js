@@ -22,6 +22,8 @@ const ContactPage = () => {
       position: "relative",
       bottom: "0",
       marginTop: "5rem",
+      paddingTop: "1rem",
+      paddingBottom: "0.6rem",
     },
     columnDiv: {
       ...styles.columnDiv,
