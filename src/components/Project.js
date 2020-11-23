@@ -65,7 +65,7 @@ const Project = (props) => {
   return (
     <Box className={classes.div}>
       <Card className={classes.card}>
-        <CardActionArea onClick={() => window.open(props.projectLink)}>
+        <CardActionArea onClick={props.projectLink !== "" ? () => window.open(props.projectLink) : () => window.open(props.githubLink)}>
           <CardContent>
             <Typography className={classes.title}>{props.title}</Typography>
             {props.icons}
@@ -82,12 +82,12 @@ const Project = (props) => {
         </CardActionArea>
         <CardActions>
           <Box className={classes.buttonDiv}>
-            <Button
+            {props.projectLink !== "" ? <Button
               className={classes.button}
               onClick={() => window.open(props.projectLink)}
             >
               Try it
-            </Button>
+            </Button> : null }
             <Button
               className={classes.button}
               onClick={() => window.open(props.githubLink)}

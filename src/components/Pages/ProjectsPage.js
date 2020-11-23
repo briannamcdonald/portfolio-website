@@ -4,7 +4,8 @@ import * as styles from "../../theme/commonStyles";
 
 import Project from "./../Project";
 import toDoListScreenshot from "./../../images/ToDoListScreenshot.jpg";
-import portfolioWebsiteScreenshot from "./../../images/PortfolioWebsiteScreenshot.jpg";
+import babyLizardsScreenshot from "./../../images/BabyLizardsScreenshot.png";
+import sobelScreenshot from "./../../images/SobelScreenshot.png";
 import calculatorScreenshot from "./../../images/CalculatorScreenshot.jpg";
 import cssArtScreenshot from "./../../images/cssart.jpg";
 
@@ -87,6 +88,13 @@ const ProjectsPage = () => {
     />
   );
 
+  const javaIcon = (
+    <Icon 
+      className="devicon-java-plain"
+      fontSize="inherit" 
+    />
+  )
+
   const toDoListIcons = (
     <Box className={classes.icons}>
       {reactIcon}
@@ -97,13 +105,9 @@ const ProjectsPage = () => {
     </Box>
   );
 
-  const portfolioWebsiteIcons = (
+  const babyLizardIcons = (
     <Box className={classes.icons}>
-      {reactIcon}
-      {javascriptIcon}
-      {materialUIIcon}
-      {htmlIcon}
-      {cssIcon}
+      {javaIcon}
     </Box>
   );
 
@@ -143,13 +147,25 @@ const ProjectsPage = () => {
         githubLink="https://github.com/briannamcdonald/react-to-do-list"
       />
       <Project
-        title="Portfolio Website"
-        icons={portfolioWebsiteIcons}
-        description="This portfolio website, created to display my projects and skills as well as other information about me."
-        image={portfolioWebsiteScreenshot}
-        imageTitle="Portfolio website screenshot"
-        projectLink="https://briannamcdonald.github.io/portfolio-website/"
-        githubLink="https://github.com/briannamcdonald/portfolio-website"
+        title="Baby Lizards Problem Genetic Algorithm"
+        icons={babyLizardIcons}
+        description={<div>
+          <p>A Genetic Algorithm to solve the Baby Lizards Problem, which is a twist on the classic N-Queens AI problem. Written using Java and complete with a GUI made with Java Swing that displays found solutions.</p>
+          <p>Further description of the problem and my solution can be found on GitHub.</p>
+        </div>}
+        image={babyLizardsScreenshot}
+        imageTitle="Baby Lizards Problem Genetic Algorithm screenshot"
+        projectLink=""
+        githubLink="https://github.com/briannamcdonald/baby-lizards-problem-GA"
+      />
+      <Project
+        title="Sobel Edge Detection"
+        icons={babyLizardIcons}
+        description="A Java program that finds the edges of a given image using the Sobel operator."
+        image={sobelScreenshot}
+        imageTitle="Screenshot of the result of Sobel Edge Detection on an image of a flower"
+        projectLink=""
+        githubLink="https://github.com/briannamcdonald/sobel-edge-detection"
       />
       <Project
         title="Calculator"
