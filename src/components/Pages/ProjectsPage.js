@@ -185,7 +185,7 @@ const ProjectsPage = () => {
         icons={cssArtIcons}
         description="A collection of drawings made with pure CSS and HTML."
         image={cssArtScreenshot}
-        imageTitle="Screenshot of a CSS art drawing of Hello Kitty."
+        imageTitle="Screenshot of a CSS pixel art drawing of a kitten."
         projectLink="https://codepen.io/collection/nJwkWd"
         githubLink="https://github.com/briannamcdonald/css-art"
       />
