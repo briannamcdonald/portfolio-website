@@ -39,61 +39,58 @@ const ProjectsPage = () => {
   const classes = useStyles();
 
   const reactIcon = (
-    <Icon
-      className="devicon-react-original"
-      fontSize="inherit"
-      style={{ marginRight: "0.35rem" }}
+    <span
+      className="iconify"
+      data-icon="logos:react"
+      data-inline="false"
+      style={{ fontSize: "1.5rem", margin: "0 0.35rem 0 0" }}
     />
   );
 
   const reduxIcon = (
     <span
       className="iconify"
-      data-icon="simple-icons:redux"
+      data-icon="logos:redux"
       data-inline="false"
       style={{ fontSize: "1.5rem", margin: "0 0.35rem" }}
     />
   );
 
   const javascriptIcon = (
-    <Icon
-      className="devicon-javascript-plain"
-      fontSize="inherit"
-      style={{ margin: "0 0.35rem" }}
-    />
-  );
-
-  const htmlIcon = (
-    <Icon
-      className="devicon-html5-plain"
-      fontSize="inherit"
-      style={{ margin: "0 0.35rem" }}
-    />
-  );
-
-  const cssIcon = (
-    <Icon
-      className="devicon-css3-plain"
-      fontSize="inherit"
-      style={{ margin: "0 0.35rem" }}
-    />
-  );
-
-  const materialUIIcon = (
     <span
       className="iconify"
-      data-icon="simple-icons:material-ui"
+      data-icon="logos:javascript"
       data-inline="false"
       style={{ margin: "0 0.35rem" }}
     />
   );
 
-  const javaIcon = (
-    <Icon 
-      className="devicon-java-plain"
-      fontSize="inherit" 
+  const htmlIcon = (
+    <span
+      className="iconify"
+      data-icon="vscode-icons:file-type-html"
+      data-inline="false"
+      style={{ fontSize: "1.7rem", margin: "0 0.35rem" }}
     />
-  )
+  );
+
+  const cssIcon = (
+    <span
+      className="iconify"
+      data-icon="vscode-icons:file-type-css"
+      data-inline="false"
+      style={{ fontSize: "1.7rem", margin: "0 0.35rem" }}
+    />
+  );
+
+  const javaIcon = (
+    <span
+      className="iconify"
+      data-icon="logos:java"
+      data-inline="false"
+      style={{ fontSize: "1.8rem" }}
+    />
+  );
 
   const toDoListIcons = (
     <Box className={classes.icons}>
@@ -105,11 +102,7 @@ const ProjectsPage = () => {
     </Box>
   );
 
-  const babyLizardIcons = (
-    <Box className={classes.icons}>
-      {javaIcon}
-    </Box>
-  );
+  const babyLizardIcons = <Box className={classes.icons}>{javaIcon}</Box>;
 
   const calculatorIcons = (
     <Box className={classes.icons}>
@@ -122,10 +115,11 @@ const ProjectsPage = () => {
 
   const cssArtIcons = (
     <Box className={classes.icons}>
-      <Icon
-        className="devicon-html5-plain"
-        fontSize="inherit"
-        style={{ marginRight: "0.35rem" }}
+      <span
+        className="iconify"
+        data-icon="vscode-icons:file-type-html"
+        data-inline="false"
+        style={{ fontSize: "1.7rem" }}
       />
       {cssIcon}
     </Box>
@@ -149,10 +143,20 @@ const ProjectsPage = () => {
       <Project
         title="Baby Lizards Problem Genetic Algorithm"
         icons={babyLizardIcons}
-        description={<div>
-          <p>A Genetic Algorithm to solve the Baby Lizards Problem, which is a twist on the classic N-Queens AI problem. Written using Java and complete with a GUI made with Java Swing that displays found solutions.</p>
-          <p>Further description of the problem and my solution can be found on GitHub.</p>
-        </div>}
+        description={
+          <div>
+            <p>
+              A Genetic Algorithm to solve the Baby Lizards Problem, which is a
+              twist on the classic N-Queens AI problem. Written using Java and
+              complete with a GUI made with Java Swing that displays found
+              solutions.
+            </p>
+            <p>
+              Further description of the problem and my solution can be found on
+              GitHub.
+            </p>
+          </div>
+        }
         image={babyLizardsScreenshot}
         imageTitle="Baby Lizards Problem Genetic Algorithm screenshot"
         projectLink=""
