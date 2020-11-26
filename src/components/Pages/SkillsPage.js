@@ -7,7 +7,6 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
-  Icon,
   Hidden,
   makeStyles,
 } from "@material-ui/core";
@@ -58,7 +57,12 @@ const SkillsPage = () => {
     <div>
       <ListItem>
         <ListItemIcon className={classes.icon}>
-          <Icon className="devicon-python-plain" fontSize="inherit" />
+          <span
+            className="iconify"
+            data-icon="simple-icons:python"
+            data-inline="false"
+            style={{ fontSize: "2rem" }}
+          />
         </ListItemIcon>
         <ListItemText
           primary="Python"
@@ -67,7 +71,12 @@ const SkillsPage = () => {
       </ListItem>
       <ListItem>
         <ListItemIcon className={classes.icon}>
-          <Icon className="devicon-java-plain" fontSize="inherit" />
+          <span
+            className="iconify"
+            data-icon="simple-icons:java"
+            data-inline="false"
+            fontSize={{ fontSize: "2.4rem" }}
+          />
         </ListItemIcon>
         <ListItemText
           primary="Java"
@@ -76,13 +85,23 @@ const SkillsPage = () => {
       </ListItem>
       <ListItem>
         <ListItemIcon className={classes.icon}>
-          <Icon className="devicon-c-plain" fontSize="inherit" />
+          <span
+            className="iconify"
+            data-icon="teenyicons:c-solid"
+            data-inline="false"
+            style={{ fontSize: "2.2rem" }}
+          />
         </ListItemIcon>
         <ListItemText primary="C" classes={{ primary: classes.listItemText }} />
       </ListItem>
       <ListItem>
         <ListItemIcon className={classes.icon}>
-          <Icon className="devicon-git-plain" fontSize="inherit" />
+          <span
+            className="iconify"
+            data-icon="cib:git"
+            data-inline="false"
+            style={{ fontSize: "2.2rem" }}
+          />
         </ListItemIcon>
         <ListItemText
           primary="Git"
@@ -134,7 +153,12 @@ const SkillsPage = () => {
           <List>
             <ListItem>
               <ListItemIcon className={classes.icon}>
-                <Icon className="devicon-react-original" fontSize="inherit" />
+                <span
+                  className="iconify"
+                  data-icon="bx:bxl-react"
+                  data-inline="false"
+                  style={{ fontSize: "2.5rem" }}
+                />
               </ListItemIcon>
               <ListItemText
                 primary="Reactjs"
@@ -157,7 +181,12 @@ const SkillsPage = () => {
             </ListItem>
             <ListItem>
               <ListItemIcon className={classes.icon}>
-                <Icon className="devicon-javascript-plain" fontSize="inherit" />
+                <span
+                  className="iconify"
+                  data-icon="ion:logo-javascript"
+                  data-inline="false"
+                  style={{ fontSize: "2.2rem" }}
+                />
               </ListItemIcon>
               <ListItemText
                 primary="JavaScript"
@@ -166,7 +195,12 @@ const SkillsPage = () => {
             </ListItem>
             <ListItem>
               <ListItemIcon className={classes.icon}>
-                <Icon className="devicon-html5-plain" fontSize="inherit" />
+                <span
+                  className="iconify"
+                  data-icon="icomoon-free:html-five"
+                  data-inline="false"
+                  style={{ fontSize: "2rem" }}
+                />
               </ListItemIcon>
               <ListItemText
                 primary="HTML"
@@ -175,7 +209,12 @@ const SkillsPage = () => {
             </ListItem>
             <ListItem>
               <ListItemIcon className={classes.icon}>
-                <Icon className="devicon-css3-plain" fontSize="inherit" />
+                <span
+                  className="iconify"
+                  data-icon="simple-icons:css3"
+                  data-inline="false"
+                  style={{ fontSize: "2rem" }}
+                />
               </ListItemIcon>
               <ListItemText
                 primary="CSS"
