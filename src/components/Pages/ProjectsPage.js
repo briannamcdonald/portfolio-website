@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Divider, Icon, makeStyles } from "@material-ui/core";
+import { Box, Typography, Divider, makeStyles } from "@material-ui/core";
 import * as styles from "../../theme/commonStyles";
 
 import Project from "./../Project";
