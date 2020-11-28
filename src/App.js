@@ -3,6 +3,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
+import AcademicProjectsPage from "./components/Pages/AcademicProjectsPage/AcademicProjectsPage";
 import NavBar from "./components/NavBar";
 import FrontPage from "./components/Pages/FrontPage";
 import AboutPage from "./components/Pages/AboutPage";
@@ -16,8 +17,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Switch>
-          <Route exact path="/test">
-            <p>test</p>
+          <Route exact path="/academic-projects">
+            <AcademicProjectsPage />
           </Route>
           <Route path="/">
             <NavBar />
