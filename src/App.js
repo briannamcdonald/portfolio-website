@@ -15,9 +15,9 @@ import theme from "./theme/theme";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route exact path="/academic-projects">
+          <Route exact path={`/academic-projects`}>
             <AcademicProjectsPage />
           </Route>
           <Route path="/">
