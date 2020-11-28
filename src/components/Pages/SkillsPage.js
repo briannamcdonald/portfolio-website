@@ -109,6 +109,21 @@ const SkillsPage = () => {
         />
       </ListItem>
       <ListItem>
+        <ListItemIcon>
+          <span
+            className="iconify"
+            data-icon="cib:jira"
+            data-inline="false"
+            style={{ fontSize: "2.2rem" }}
+          />
+        </ListItemIcon>
+        <ListItemText
+          primary="Jira"
+          classes={{ primary: classes.listItemText }}
+        />
+      </ListItem>
+
+      <ListItem>
         <ListItemIcon className={classes.icon}>
           <span
             className="iconify"
@@ -145,7 +160,7 @@ const SkillsPage = () => {
         className={`${classes.skillsText} ${classes.headerText}`}
         align="center"
       >
-        My Skills & <br /> Technologies
+        My Skills & Tools
       </Typography>
       <Divider classes={{ root: classes.divider }} />
       <Box className={`${classes.rowDiv} ${classes.rowDivider}`}>

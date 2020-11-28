@@ -5,6 +5,7 @@ import * as styles from "../../theme/commonStyles";
 import Project from "./../Project";
 import toDoListScreenshot from "./../../images/ToDoListScreenshot.jpg";
 import babyLizardsScreenshot from "./../../images/BabyLizardsScreenshot.png";
+import pathfindingScreenshot from "./../../images/pathfindingScreenshot.png";
 import sobelScreenshot from "./../../images/SobelScreenshot.png";
 import calculatorScreenshot from "./../../images/CalculatorScreenshot.jpg";
 import cssArtScreenshot from "./../../images/cssart.jpg";
@@ -13,20 +14,14 @@ const ProjectsPage = () => {
   const useStyles = makeStyles({
     columnDiv: {
       ...styles.columnDiv,
-    },
-    mainDiv: {
       width: "auto",
     },
     headerText: {
       ...styles.headerText,
-    },
-    projectText: {
       marginTop: "5rem",
     },
     divider: {
       ...styles.divider,
-    },
-    projectsDivider: {
       paddingBottom: "0.15rem",
     },
     icons: {
@@ -61,7 +56,7 @@ const ProjectsPage = () => {
       className="iconify"
       data-icon="logos:javascript"
       data-inline="false"
-      style={{ margin: "0 0.35rem" }}
+      style={{ fontSize: "1.6rem", margin: "0 0.35rem" }}
     />
   );
 
@@ -88,7 +83,7 @@ const ProjectsPage = () => {
       className="iconify"
       data-icon="logos:java"
       data-inline="false"
-      style={{ fontSize: "1.8rem" }}
+      style={{ fontSize: "1.7rem", margin: "0 0.35rem 0 0" }}
     />
   );
 
@@ -125,12 +120,17 @@ const ProjectsPage = () => {
     </Box>
   );
 
+  const academicProjectsIcons = (
+    <Box className={classes.icons}>
+      {javaIcon}
+      {javascriptIcon}
+    </Box>
+  );
+
   return (
-    <Box className={`${classes.columnDiv} ${classes.mainDiv}`} id="Projects">
-      <Typography className={`${classes.projectText} ${classes.headerText}`}>
-        Projects
-      </Typography>
-      <Divider className={`${classes.divider} ${classes.projectsDivider}`} />
+    <Box className={classes.columnDiv} id="Projects">
+      <Typography className={classes.headerText}>Projects</Typography>
+      <Divider className={classes.divider} />
       <Project
         title="To-Do List"
         icons={toDoListIcons}
@@ -139,28 +139,36 @@ const ProjectsPage = () => {
         imageTitle="To-do List screenshot"
         projectLink="https://briannamcdonald.github.io/react-to-do-list/"
         githubLink="https://github.com/briannamcdonald/react-to-do-list"
+        buttonText1="Live Demo"
+        buttonText2="GitHub"
       />
       <Project
         title="Baby Lizards Problem Genetic Algorithm"
         icons={babyLizardIcons}
         description={
-          <div>
-            <p>
-              A Genetic Algorithm to solve the Baby Lizards Problem, which is a
-              twist on the classic N-Queens AI problem. Written using Java and
-              complete with a GUI made with Java Swing that displays found
-              solutions.
-            </p>
-            <p>
-              Further description of the problem and my solution can be found on
-              GitHub.
-            </p>
-          </div>
+          <span>
+            A Genetic Algorithm to solve the Baby Lizards Problem, which is a
+            twist on the classic N-Queens AI problem. Written using Java and
+            complete with a GUI made with Java Swing that displays found
+            solutions. <br /> Further description of the problem and my solution
+            can be found on GitHub.
+          </span>
         }
         image={babyLizardsScreenshot}
         imageTitle="Baby Lizards Problem Genetic Algorithm screenshot"
-        projectLink=""
-        githubLink="https://github.com/briannamcdonald/baby-lizards-problem-GA"
+        link1=""
+        link2="https://github.com/briannamcdonald/baby-lizards-problem-GA"
+        buttonText2="GitHub"
+      />
+      <Project
+        title="Academic Projects"
+        icons={academicProjectsIcons}
+        description="A collection of videos and descriptions of some of my recent academic projects, completed during my third year of studies. Includes artifical intelligence and image processing projects."
+        image={pathfindingScreenshot}
+        imageTitle="Pathfinding using A* Heuristic Search screenshot"
+        link1=""
+        link2="/academic-projects"
+        buttonText2="Link"
       />
       <Project
         title="Sobel Edge Detection"
@@ -168,8 +176,9 @@ const ProjectsPage = () => {
         description="A Java program that finds the edges of a given image using the Sobel operator."
         image={sobelScreenshot}
         imageTitle="Screenshot of the result of Sobel Edge Detection on an image of a flower"
-        projectLink=""
-        githubLink="https://github.com/briannamcdonald/sobel-edge-detection"
+        link1=""
+        link2="https://github.com/briannamcdonald/sobel-edge-detection"
+        buttonText2="GitHub"
       />
       <Project
         title="Calculator"
@@ -177,8 +186,10 @@ const ProjectsPage = () => {
         description="A simple calculator application made with Reactjs. Features include a fully responsive design and a dark mode and a pink mode."
         image={calculatorScreenshot}
         imageTitle="Calculator screenshot"
-        projectLink="https://briannamcdonald.github.io/react-calculator/"
-        githubLink="https://github.com/briannamcdonald/react-calculator"
+        link1="https://briannamcdonald.github.io/react-calculator/"
+        link2="https://github.com/briannamcdonald/react-calculator"
+        buttonText1="Live Demo"
+        buttonText2="GitHub"
       />
       <Project
         title="CSS Art"
@@ -186,8 +197,10 @@ const ProjectsPage = () => {
         description="A collection of drawings made with pure CSS and HTML."
         image={cssArtScreenshot}
         imageTitle="Screenshot of a CSS pixel art drawing of a kitten."
-        projectLink="https://codepen.io/collection/nJwkWd"
-        githubLink="https://github.com/briannamcdonald/css-art"
+        link1="https://codepen.io/collection/nJwkWd"
+        link2="https://github.com/briannamcdonald/css-art"
+        buttonText1="Codepen"
+        buttonText2="GitHub"
       />
     </Box>
   );
