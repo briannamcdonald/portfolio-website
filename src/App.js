@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import AcademicProjectsPage from "./components/Pages/AcademicProjectsPage/AcademicProjectsPage";
@@ -26,16 +26,16 @@ const website = (
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router basename={process.env.PUBLIC_URL}>
+      <HashRouter basename="/">
         <Switch>
           <Route
             exact
-            path={`/academic-projects`}
+            path="/academic-projects"
             render={() => <AcademicProjectsPage />}
           />
-          <Route path={`/`} render={() => website} />
+          <Route path="/" render={() => website} />
         </Switch>
-      </Router>
+      </HashRouter>
     </ThemeProvider>
   );
 }

@@ -167,7 +167,7 @@ const ProjectsPage = () => {
         image={pathfindingScreenshot}
         imageTitle="Pathfinding using A* Heuristic Search screenshot"
         link1=""
-        link2="/portfolio-website/academic-projects"
+        link2="/academic-projects"
         buttonText2="Link"
       />
       <Project
