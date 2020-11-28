@@ -15,7 +15,7 @@ import theme from "../theme/theme";
 const Project = (props) => {
   const useStyles = makeStyles({
     card: {
-      width: "50%",
+      width: "60%",
       [theme.breakpoints.down("md")]: {
         width: "60%",
       },
@@ -65,7 +65,13 @@ const Project = (props) => {
   return (
     <Box className={classes.div}>
       <Card className={classes.card}>
-        <CardActionArea onClick={props.projectLink !== "" ? () => window.open(props.projectLink) : () => window.open(props.githubLink)}>
+        <CardActionArea
+          onClick={
+            props.link1 !== ""
+              ? () => window.open(props.link1)
+              : () => window.open(props.link2)
+          }
+        >
           <CardContent>
             <Typography className={classes.title}>{props.title}</Typography>
             {props.icons}
@@ -82,17 +88,19 @@ const Project = (props) => {
         </CardActionArea>
         <CardActions>
           <Box className={classes.buttonDiv}>
-            {props.projectLink !== "" ? <Button
-              className={classes.button}
-              onClick={() => window.open(props.projectLink)}
-            >
-              Try it
-            </Button> : null }
+            {props.link1 !== "" ? (
+              <Button
+                className={classes.button}
+                onClick={() => window.open(props.link1)}
+              >
+                {props.buttonText1}
+              </Button>
+            ) : null}
             <Button
               className={classes.button}
-              onClick={() => window.open(props.githubLink)}
+              onClick={() => window.open(props.link2)}
             >
-              GitHub
+              {props.buttonText2}
             </Button>
           </Box>
         </CardActions>
