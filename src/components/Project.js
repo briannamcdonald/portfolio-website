@@ -10,6 +10,7 @@ import {
   CardMedia,
   makeStyles,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import theme from "../theme/theme";
 
 const Project = (props) => {
@@ -67,7 +68,9 @@ const Project = (props) => {
       <Card className={classes.card}>
         <CardActionArea
           onClick={
-            props.link1 !== ""
+            props.academicProjects
+              ? null
+              : props.link1 !== ""
               ? () => window.open(props.link1)
               : () => window.open(props.link2)
           }
@@ -96,12 +99,18 @@ const Project = (props) => {
                 {props.buttonText1}
               </Button>
             ) : null}
-            <Button
-              className={classes.button}
-              onClick={() => window.open(props.link2)}
-            >
-              {props.buttonText2}
-            </Button>
+            {props.academicProjects ? (
+              <Link to="/academic-projects" style={{ textDecoration: "none" }}>
+                <Button className={classes.button}>{props.buttonText2}</Button>
+              </Link>
+            ) : (
+              <Button
+                className={classes.button}
+                onClick={() => window.open(props.link2)}
+              >
+                {props.buttonText2}
+              </Button>
+            )}
           </Box>
         </CardActions>
       </Card>

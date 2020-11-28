@@ -169,6 +169,7 @@ const ProjectsPage = () => {
         link1=""
         link2="/academic-projects"
         buttonText2="Link"
+        academicProjects
       />
       <Project
         title="Sobel Edge Detection"
