@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
@@ -10,6 +10,7 @@ import AboutPage from "./components/Pages/AboutPage";
 import ContactPage from "./components/Pages/ContactPage";
 import ProjectsPage from "./components/Pages/ProjectsPage";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import theme from "./theme/theme";
 
 const website = (
@@ -27,14 +28,17 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <HashRouter basename="/">
-        <Switch>
-          <Route
-            exact
-            path="/academic-projects"
-            render={() => <AcademicProjectsPage />}
-          />
-          <Route path="/" render={() => website} />
-        </Switch>
+        <Fragment>
+          <ScrollToTop />
+          <Switch>
+            <Route
+              exact
+              path="/academic-projects"
+              render={() => <AcademicProjectsPage />}
+            />
+            <Route path="/" render={() => website} />
+          </Switch>
+        </Fragment>
       </HashRouter>
     </ThemeProvider>
   );

@@ -68,6 +68,7 @@ const RoutingProject = (props) => {
       <Card className={classes.card}>
         <Link
           to={props.route}
+          target="_blank"
           style={{ textDecoration: "none", color: "black" }}
         >
           <CardActionArea>
@@ -87,7 +88,11 @@ const RoutingProject = (props) => {
           </CardActionArea>
           <CardActions>
             <Box className={classes.buttonDiv}>
-              <Link to={props.route} style={{ textDecoration: "none" }}>
+              <Link
+                to={props.route}
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
                 <Button className={classes.button}>{props.buttonText}</Button>
               </Link>
             </Box>
