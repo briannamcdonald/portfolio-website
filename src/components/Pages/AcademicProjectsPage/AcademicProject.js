@@ -35,9 +35,6 @@ const AcademicProject = (props) => {
       width: "100%",
       margin: "1rem",
     },
-    text: {
-      margin: "0.5rem 0",
-    },
     image: {
       height: "100%",
       boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
@@ -86,7 +83,7 @@ const AcademicProject = (props) => {
               title={props.imageTitle}
             />
           )}
-          <Typography className={classes.text}>{props.description}</Typography>
+          {props.description}
         </CardContent>
       </Card>
     </Box>
