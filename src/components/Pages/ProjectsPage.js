@@ -3,6 +3,7 @@ import { Box, Typography, Divider, makeStyles } from "@material-ui/core";
 import * as styles from "../../theme/commonStyles";
 
 import Project from "./../Project";
+import RoutingProject from "./../RoutingProject";
 import toDoListScreenshot from "./../../images/ToDoListScreenshot.jpg";
 import babyLizardsScreenshot from "./../../images/BabyLizardsScreenshot.png";
 import pathfindingScreenshot from "./../../images/pathfindingScreenshot.png";
@@ -137,8 +138,8 @@ const ProjectsPage = () => {
         description="A to-do list application made with Reactjs and Redux. Features include the ability to sort tasks, a fully responsive design, and a dark mode and a pink mode."
         image={toDoListScreenshot}
         imageTitle="To-do List screenshot"
-        projectLink="https://briannamcdonald.github.io/react-to-do-list/"
-        githubLink="https://github.com/briannamcdonald/react-to-do-list"
+        link1="https://briannamcdonald.github.io/react-to-do-list/"
+        link2="https://github.com/briannamcdonald/react-to-do-list"
         buttonText1="Live Demo"
         buttonText2="GitHub"
       />
@@ -160,16 +161,14 @@ const ProjectsPage = () => {
         link2="https://github.com/briannamcdonald/baby-lizards-problem-GA"
         buttonText2="GitHub"
       />
-      <Project
+      <RoutingProject
         title="Academic Projects"
         icons={academicProjectsIcons}
         description="A collection of videos and descriptions of some of my recent academic projects, completed during my third year of studies. Includes artifical intelligence and image processing projects."
         image={pathfindingScreenshot}
         imageTitle="Pathfinding using A* Heuristic Search screenshot"
-        link1=""
-        link2="/academic-projects"
-        buttonText2="Link"
-        academicProjects
+        route="/academic-projects"
+        buttonText="Link"
       />
       <Project
         title="Sobel Edge Detection"

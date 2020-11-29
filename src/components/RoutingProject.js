@@ -10,9 +10,10 @@ import {
   CardMedia,
   makeStyles,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import theme from "../theme/theme";
 
-const Project = (props) => {
+const RoutingProject = (props) => {
   const useStyles = makeStyles({
     card: {
       width: "60%",
@@ -65,48 +66,36 @@ const Project = (props) => {
   return (
     <Box className={classes.div}>
       <Card className={classes.card}>
-        <CardActionArea
-          onClick={
-            props.link1 !== ""
-              ? () => window.open(props.link1)
-              : () => window.open(props.link2)
-          }
+        <Link
+          to={props.route}
+          style={{ textDecoration: "none", color: "black" }}
         >
-          <CardContent>
-            <Typography className={classes.title}>{props.title}</Typography>
-            {props.icons}
-            <Typography className={classes.text}>
-              {props.description}
-            </Typography>
-            <CardMedia
-              className={classes.image}
-              component="img"
-              image={props.image}
-              title={props.imageTitle}
-            />
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Box className={classes.buttonDiv}>
-            {props.link1 !== "" ? (
-              <Button
-                className={classes.button}
-                onClick={() => window.open(props.link1)}
-              >
-                {props.buttonText1}
-              </Button>
-            ) : null}
-            <Button
-              className={classes.button}
-              onClick={() => window.open(props.link2)}
-            >
-              {props.buttonText2}
-            </Button>
-          </Box>
-        </CardActions>
+          <CardActionArea>
+            <CardContent>
+              <Typography className={classes.title}>{props.title}</Typography>
+              {props.icons}
+              <Typography className={classes.text}>
+                {props.description}
+              </Typography>
+              <CardMedia
+                className={classes.image}
+                component="img"
+                image={props.image}
+                title={props.imageTitle}
+              />
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Box className={classes.buttonDiv}>
+              <Link to={props.route} style={{ textDecoration: "none" }}>
+                <Button className={classes.button}>{props.buttonText}</Button>
+              </Link>
+            </Box>
+          </CardActions>
+        </Link>
       </Card>
     </Box>
   );
 };
 
-export default Project;
+export default RoutingProject;
