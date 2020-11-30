@@ -86,18 +86,18 @@ const RoutingProject = (props) => {
               />
             </CardContent>
           </CardActionArea>
-          <CardActions>
-            <Box className={classes.buttonDiv}>
-              <Link
-                to={props.route}
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <Button className={classes.button}>{props.buttonText}</Button>
-              </Link>
-            </Box>
-          </CardActions>
         </Link>
+        <CardActions>
+          <Box className={classes.buttonDiv}>
+            <Link
+              to={props.route}
+              target="_blank"
+              style={{ textDecoration: "none" }}
+            >
+              <Button className={classes.button}>{props.buttonText}</Button>
+            </Link>
+          </Box>
+        </CardActions>
       </Card>
     </Box>
   );
