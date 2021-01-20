@@ -12,7 +12,12 @@ import theme from "./../../../theme/theme";
 const AcademicProject = (props) => {
   const useStyles = makeStyles({
     card: {
-      width: "60%",
+      [theme.breakpoints.down("xl")]: {
+        width: "45%",
+      },
+      [theme.breakpoints.down("lg")]: {
+        width: "50%",
+      },
       [theme.breakpoints.down("md")]: {
         width: "60%",
       },

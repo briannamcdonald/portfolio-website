@@ -56,9 +56,14 @@ const ContactPage = () => {
     },
     icon: {
       color: "#eeeeee",
-      margin: "0.5rem",
+      [theme.breakpoints.down("xl")]: {
+        margin: "0.2rem 1.4rem",
+      },
+      [theme.breakpoints.down("md")]: {
+        margin: "0.2rem 0.5rem",
+      },
       [theme.breakpoints.down("sm")]: {
-        margin: "0.1rem"
+        margin: "0.1rem",
       },
     },
     github: {
@@ -101,7 +106,12 @@ const ContactPage = () => {
           aria-label="CodePen link"
           onClick={() => window.open("https://codepen.io/briannamcdonald")}
         >
-          <span className="iconify" data-icon="ant-design:codepen-outlined" data-inline="false" style={{ fontSize: "2.8rem" }} />
+          <span
+            className="iconify"
+            data-icon="ant-design:codepen-outlined"
+            data-inline="false"
+            style={{ fontSize: "2.8rem" }}
+          />
         </IconButton>
       </Tooltip>
       <Tooltip title="Twitter" arrow TransitionComponent={Zoom}>

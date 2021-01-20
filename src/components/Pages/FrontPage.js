@@ -41,6 +41,10 @@ const FrontPage = () => {
         top: "4rem",
         fontSize: "3.4rem",
       },
+      [theme.breakpoints.up("lg")]: {
+        top: "7rem",
+        fontSize: "5rem",
+      },
     },
     topText: {
       position: "relative",
@@ -50,14 +54,23 @@ const FrontPage = () => {
         top: "4rem",
         fontSize: "2.5rem",
       },
+      [theme.breakpoints.up("lg")]: {
+        top: "7rem",
+        fontSize: "4rem",
+      },
     },
     bottomText: {
       position: "relative",
       top: "6rem",
       margin: "0 1.4rem",
+      fontSize: "1.1rem",
       [theme.breakpoints.down("xs")]: {
         top: "4rem",
-        fontSize: "1.2rem",
+        fontSize: "1rem",
+      },
+      [theme.breakpoints.up("lg")]: {
+        top: "7rem",
+        fontSize: "1.4rem",
       },
     },
     button: {
@@ -79,7 +92,7 @@ const FrontPage = () => {
     backToTopButtonMobile: {
       margin: "0.8rem",
       marginBottom: "3rem",
-    }
+    },
   });
   const classes = useStyles();
 
@@ -96,8 +109,8 @@ const FrontPage = () => {
       <Typography className={classes.name} variant="h2" align="center">
         Brianna McDonald.
       </Typography>
-      <Typography className={classes.bottomText} variant="h6" align="center">
-        Computer Science student and aspiring developer.
+      <Typography className={classes.bottomText} align="center">
+        Computer Science Student, Web Developer, & AI Enthusiast.
       </Typography>
       <IconButton
         className={classes.button}

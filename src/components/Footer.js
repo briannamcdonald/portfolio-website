@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <Box className={classes.div}>
-      <Typography className={classes.text}>2020 © Brianna McDonald</Typography>
+      <Typography className={classes.text}>2021 © Brianna McDonald</Typography>
     </Box>
   );
 };

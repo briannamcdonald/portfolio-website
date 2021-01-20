@@ -41,9 +41,17 @@ const AcademicProjectsPage = () => {
     text: {
       margin: "0.35rem 1rem",
       textAlign: "center",
-      width: "60%",
+      [theme.breakpoints.down("xl")]: {
+        width: "40%",
+      },
+      [theme.breakpoints.down("lg")]: {
+        width: "50%",
+      },
+      [theme.breakpoints.down("md")]: {
+        width: "60%",
+      },
       [theme.breakpoints.down("sm")]: {
-        width: "80%",
+        width: "75%",
       },
       [theme.breakpoints.down("xs")]: {
         width: "90%",

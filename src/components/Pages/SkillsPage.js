@@ -190,7 +190,7 @@ const SkillsPage = () => {
                 />
               </ListItemIcon>
               <ListItemText
-                primary="Redux & React Hooks"
+                primary="Redux"
                 classes={{ primary: classes.listItemText }}
               />
             </ListItem>
@@ -247,6 +247,20 @@ const SkillsPage = () => {
               </ListItemIcon>
               <ListItemText
                 primary="Chakra UI & Material UI"
+                classes={{ primary: classes.listItemText }}
+              />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon className={classes.icon}>
+                <span
+                  class="iconify"
+                  data-icon="file-icons:sqlite"
+                  data-inline="false"
+                  style={{ fontSize: "2rem" }}
+                />
+              </ListItemIcon>
+              <ListItemText
+                primary="SQLite"
                 classes={{ primary: classes.listItemText }}
               />
             </ListItem>

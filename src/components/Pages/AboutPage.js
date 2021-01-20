@@ -12,7 +12,15 @@ const AboutPage = () => {
       ...styles.columnDiv,
     },
     mainDiv: {
-      width: "60%",
+      [theme.breakpoints.down("xl")]: {
+        width: "45%",
+      },
+      [theme.breakpoints.down("lg")]: {
+        width: "50%",
+      },
+      [theme.breakpoints.down("md")]: {
+        width: "60%",
+      },
       [theme.breakpoints.down("sm")]: {
         width: "80%",
       },
@@ -82,13 +90,14 @@ const AboutPage = () => {
         <Divider classes={{ root: classes.divider }} />
         <Typography className={classes.bodyText}>
           My name is <b>Brianna McDonald</b> and I am a third year Computer
-          Science honours student at Memorial University, living in Newfoundland,
-          Canada. <br /> <br /> I really enjoy programmming and love to be
-          always learning something new. I have a strong work ethic, as shown by
-          my 4.0 GPA, and I can quickly pick up on new technologies. <br /> <br />{" "}
-          In my spare time I work on a web development team as a front-end
-          developer for a non-profit organization, and also work on my own
-          programming projects. You can find my {/* TODO - add resume link */}{" "}
+          Science honours student at Memorial University, living in
+          Newfoundland, Canada. <br /> <br /> I really enjoy programmming and
+          love to be always learning something new. I have a strong work ethic,
+          as shown by my 4.0 GPA, and I can quickly pick up on new technologies.{" "}
+          <br /> <br /> In my spare time I work on a web development team as a
+          front-end developer for a non-profit organization, and also work on my
+          own programming projects. You can find my{" "}
+          {/* TODO - add resume link */}{" "}
           <Link
             onClick={scrollToContact}
             className={classes.link}
