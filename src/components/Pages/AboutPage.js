@@ -90,14 +90,14 @@ const AboutPage = () => {
         <Divider classes={{ root: classes.divider }} />
         <Typography className={classes.bodyText}>
           My name is <b>Brianna McDonald</b> and I am a third year Computer
-          Science honours student at Memorial University, living in
+          Science Honours student at Memorial University, living in
           Newfoundland, Canada. <br /> <br /> I really enjoy programmming and
           love to be always learning something new. I have a strong work ethic,
           as shown by my 4.0 GPA, and I can quickly pick up on new technologies.{" "}
-          <br /> <br /> In my spare time I work on a web development team as a
-          front-end developer for a non-profit organization, and also work on my
-          own programming projects. You can find my{" "}
-          {/* TODO - add resume link */}{" "}
+          <br /> <br /> I have eight months of experience as a front-end
+          developer on a web development team, and I also like to work on
+          developing my own programming projects in my spare time. You can find
+          my {/* TODO - add resume link */}{" "}
           <Link
             onClick={scrollToContact}
             className={classes.link}
