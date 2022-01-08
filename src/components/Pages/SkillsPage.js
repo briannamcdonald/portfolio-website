@@ -1,280 +1,207 @@
 import React from "react";
 import {
-  Box,
-  Typography,
-  Divider,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Hidden,
-  makeStyles,
+    Box,
+    Typography,
+    Divider,
+    useMediaQuery,
+    makeStyles,
 } from "@material-ui/core";
-import theme from "./../../theme/theme";
+import theme from "../../theme/theme";
 import * as styles from "../../theme/commonStyles";
+import sqliteLogo from "./../../images/sqliteLogo.png";
 
-const SkillsPage = () => {
-  const useStyles = makeStyles({
-    columnDiv: {
-      ...styles.columnDiv,
-    },
-    mainDiv: {
-      backgroundColor: "#e8e8e8",
-      margin: "0 auto",
-      paddingBottom: "1rem",
-    },
-    rowDiv: {
-      ...styles.rowDiv,
-    },
-    rowDivider: {
-      width: "50%",
-      [theme.breakpoints.down("sm")]: {
-        width: "70%",
-      },
-    },
-    divider: {
-      ...styles.divider,
-    },
-    headerText: {
-      ...styles.headerText,
-    },
-    skillsText: {
-      marginTop: "2rem",
-    },
-    listItemText: {
-      color: "black",
-      fontSize: "1.2rem",
-      margin: "0 1rem",
-    },
-    icon: {
-      color: "black",
-      fontSize: "2rem",
-    },
-  });
-  const classes = useStyles();
+import SkillBox from "../SkillBox";
 
-  const secondHalfList = (
-    <div>
-      <ListItem>
-        <ListItemIcon className={classes.icon}>
-          <span
-            className="iconify"
-            data-icon="simple-icons:python"
-            data-inline="false"
-            style={{ fontSize: "2rem" }}
-          />
-        </ListItemIcon>
-        <ListItemText
-          primary="Python"
-          classes={{ primary: classes.listItemText }}
-        />
-      </ListItem>
-      <ListItem>
-        <ListItemIcon className={classes.icon}>
-          <span
-            className="iconify"
-            data-icon="simple-icons:java"
-            data-inline="false"
-            fontSize={{ fontSize: "2.4rem" }}
-          />
-        </ListItemIcon>
-        <ListItemText
-          primary="Java"
-          classes={{ primary: classes.listItemText }}
-        />
-      </ListItem>
-      <ListItem>
-        <ListItemIcon className={classes.icon}>
-          <span
-            className="iconify"
-            data-icon="teenyicons:c-solid"
-            data-inline="false"
-            style={{ fontSize: "2.2rem" }}
-          />
-        </ListItemIcon>
-        <ListItemText primary="C" classes={{ primary: classes.listItemText }} />
-      </ListItem>
-      <ListItem>
-        <ListItemIcon className={classes.icon}>
-          <span
-            className="iconify"
-            data-icon="cib:git"
-            data-inline="false"
-            style={{ fontSize: "2.2rem" }}
-          />
-        </ListItemIcon>
-        <ListItemText
-          primary="Git"
-          classes={{ primary: classes.listItemText }}
-        />
-      </ListItem>
-      <ListItem>
-        <ListItemIcon>
-          <span
-            className="iconify"
-            data-icon="cib:jira"
-            data-inline="false"
-            style={{ fontSize: "2.2rem" }}
-          />
-        </ListItemIcon>
-        <ListItemText
-          primary="Jira"
-          classes={{ primary: classes.listItemText }}
-        />
-      </ListItem>
+const NewSkillsPage = () => {
+    const useStyles = makeStyles({
+        columnDiv: {
+            ...styles.columnDiv,
+        },
+        mainDiv: {
+            backgroundColor: "#e8e8e8",
+            margin: "0 auto",
+            paddingBottom: "2.25rem",
+        },
+        rowDiv: {
+            ...styles.rowDiv,
+        },
+        rowDivider: {
+            width: "70%",
+            [theme.breakpoints.down("sm")]: {
+                width: "95%",
+            },
+        },
+        divider: {
+            ...styles.divider,
+        },
+        headerText: {
+            ...styles.headerText,
+        },
+        skillsText: {
+            marginTop: "2rem",
+        },
+        listItemText: {
+            color: "black",
+            fontSize: "1.2rem",
+            margin: "0 1rem",
+        },
+    });
+    const classes = useStyles();
+    const showSmallRows = useMediaQuery(theme.breakpoints.down("sm"));
 
-      <ListItem>
-        <ListItemIcon className={classes.icon}>
-          <span
-            className="iconify"
-            data-icon="ion:terminal"
-            data-inline="false"
-            style={{ fontSize: "2rem" }}
-          />
-        </ListItemIcon>
-        <ListItemText
-          primary="Terminal"
-          classes={{ primary: classes.listItemText }}
+    const python = (
+        <SkillBox
+            title="PYTHON"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
         />
-      </ListItem>
-      <ListItem>
-        <ListItemIcon className={classes.icon}>
-          <span
-            className="iconify"
-            data-icon="file-icons:vscode"
-            data-inline="false"
-            style={{ fontSize: "2rem" }}
-          />
-        </ListItemIcon>
-        <ListItemText
-          primary="VSCode"
-          classes={{ primary: classes.listItemText }}
+    );
+    const javascript = (
+        <SkillBox
+            title="JAVASCRIPT"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
         />
-      </ListItem>
-    </div>
-  );
+    );
+    const cplusplus = (
+        <SkillBox
+            title="C++"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+        />
+    );
+    const java = (
+        <SkillBox
+            title="JAVA"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+        />
+    );
+    const unity = (
+        <SkillBox
+            title="UNITY"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+        />
+    );
+    const react = (
+        <SkillBox
+            title="REACT JS"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        />
+    );
+    const node = (
+        <SkillBox
+            title="NODE JS"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        />
+    );
+    const redux = (
+        <SkillBox
+            title="REDUX"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+        />
+    );
+    const html = (
+        <SkillBox
+            title="HTML"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+        />
+    );
+    const css = (
+        <SkillBox
+            title="CSS"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+        />
+    );
+    const git = (
+        <SkillBox
+            title="GIT"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+        />
+    );
+    const jira = (
+        <SkillBox
+            title="JIRA"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+        />
+    );
+    const mongodb = (
+        <SkillBox
+            title="MONGO DB"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+        />
+    );
+    const sqlite = <SkillBox title="SQLITE" image={sqliteLogo} />;
+    const figma = (
+        <SkillBox
+            title="FIGMA"
+            link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+        />
+    );
 
-  return (
-    <Box className={`${classes.columnDiv} ${classes.mainDiv}`}>
-      <Typography
-        className={`${classes.skillsText} ${classes.headerText}`}
-        align="center"
-      >
-        My Skills & Tools
-      </Typography>
-      <Divider classes={{ root: classes.divider }} />
-      <Box className={`${classes.rowDiv} ${classes.rowDivider}`}>
-        <Box className={classes.columnDiv}>
-          <List>
-            <ListItem>
-              <ListItemIcon className={classes.icon}>
-                <span
-                  className="iconify"
-                  data-icon="bx:bxl-react"
-                  data-inline="false"
-                  style={{ fontSize: "2.5rem" }}
-                />
-              </ListItemIcon>
-              <ListItemText
-                primary="Reactjs"
-                classes={{ primary: classes.listItemText }}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon className={classes.icon}>
-                <span
-                  className="iconify"
-                  data-icon="simple-icons:redux"
-                  data-inline="false"
-                  style={{ fontSize: "2rem" }}
-                />
-              </ListItemIcon>
-              <ListItemText
-                primary="Redux"
-                classes={{ primary: classes.listItemText }}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon className={classes.icon}>
-                <span
-                  className="iconify"
-                  data-icon="ion:logo-javascript"
-                  data-inline="false"
-                  style={{ fontSize: "2.2rem" }}
-                />
-              </ListItemIcon>
-              <ListItemText
-                primary="JavaScript"
-                classes={{ primary: classes.listItemText }}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon className={classes.icon}>
-                <span
-                  className="iconify"
-                  data-icon="icomoon-free:html-five"
-                  data-inline="false"
-                  style={{ fontSize: "2rem" }}
-                />
-              </ListItemIcon>
-              <ListItemText
-                primary="HTML"
-                classes={{ primary: classes.listItemText }}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon className={classes.icon}>
-                <span
-                  className="iconify"
-                  data-icon="simple-icons:css3"
-                  data-inline="false"
-                  style={{ fontSize: "2rem" }}
-                />
-              </ListItemIcon>
-              <ListItemText
-                primary="CSS"
-                classes={{ primary: classes.listItemText }}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon className={classes.icon}>
-                <span
-                  className="iconify"
-                  data-icon="simple-icons:material-ui"
-                  data-inline="false"
-                  style={{ fontSize: "2rem" }}
-                />
-              </ListItemIcon>
-              <ListItemText
-                primary="Chakra UI & Material UI"
-                classes={{ primary: classes.listItemText }}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon className={classes.icon}>
-                <span
-                  class="iconify"
-                  data-icon="file-icons:sqlite"
-                  data-inline="false"
-                  style={{ fontSize: "2rem" }}
-                />
-              </ListItemIcon>
-              <ListItemText
-                primary="SQLite"
-                classes={{ primary: classes.listItemText }}
-              />
-            </ListItem>
-            <Hidden mdUp>{secondHalfList}</Hidden>
-          </List>
+    const normalRows = (
+        <Box className={classes.rowDivider}>
+            <Box className={classes.rowDiv}>
+                {python}
+                {javascript}
+                {cplusplus}
+                {java}
+                {unity}
+            </Box>
+            <Box className={classes.rowDiv}>
+                {react}
+                {node}
+                {redux}
+                {html}
+                {css}
+            </Box>
+            <Box className={classes.rowDiv}>
+                {git}
+                {jira}
+                {mongodb}
+                {sqlite}
+                {figma}
+            </Box>
         </Box>
-        <Hidden smDown>
-          <Box className={classes.columnDiv}>
-            <List>{secondHalfList}</List>
-          </Box>
-        </Hidden>
-      </Box>
-    </Box>
-  );
+    );
+    const smallRows = (
+        <Box className={classes.rowDivider}>
+            <Box className={classes.rowDiv}>
+                {python}
+                {javascript}
+                {cplusplus}
+            </Box>
+            <Box className={classes.rowDiv}>
+                {java}
+                {unity}
+                {git}
+            </Box>
+            <Box className={classes.rowDiv}>
+                {react}
+                {node}
+                {redux}
+            </Box>
+            <Box className={classes.rowDiv}>
+                {html}
+                {css}
+                {figma}
+            </Box>
+            <Box className={classes.rowDiv}>
+                {mongodb}
+                {sqlite}
+                {jira}
+            </Box>
+        </Box>
+    );
+
+    return (
+        <Box className={`${classes.columnDiv} ${classes.mainDiv}`}>
+            <Typography
+                className={`${classes.skillsText} ${classes.headerText}`}
+                align="center"
+            >
+                My Skills & Tools
+            </Typography>
+            <Divider classes={{ root: classes.divider }} />
+            {showSmallRows ? smallRows : normalRows}
+        </Box>
+    );
 };
 
-export default SkillsPage;
+export default NewSkillsPage;
