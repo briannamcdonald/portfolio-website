@@ -12,7 +12,7 @@ import Project from "./../Project";
 import RoutingProject from "./../RoutingProject";
 import toDoListGif from "./../../images/ToDoListGif.gif";
 import babyLizardsScreenshot from "./../../images/BabyLizardsScreenshot.png";
-import pathfindingScreenshot from "./../../images/pathfindingScreenshot.png";
+import academicProjectScreenshot from "./../../images/academicProjectScreenshot.png";
 import sobelScreenshot from "./../../images/SobelScreenshot.png";
 import calculatorGif from "./../../images/calculatorGif.gif";
 import cssArtScreenshot from "./../../images/cssart.jpg";
@@ -39,6 +39,7 @@ const ProjectsPage = () => {
             display: "flex",
             width: "100%",
             margin: "0.5rem 0",
+            gap: "0.7rem",
         },
         button: {
             margin: "0.5rem",
@@ -60,7 +61,7 @@ const ProjectsPage = () => {
             className="iconify"
             data-icon="logos:react"
             data-inline="false"
-            style={{ fontSize: "1.5rem", margin: "0 0.35rem 0 0" }}
+            style={{ fontSize: "1.5rem" }}
         />
     );
 
@@ -69,7 +70,7 @@ const ProjectsPage = () => {
             className="iconify"
             data-icon="logos:redux"
             data-inline="false"
-            style={{ fontSize: "1.5rem", margin: "0 0.35rem" }}
+            style={{ fontSize: "1.5rem" }}
         />
     );
 
@@ -78,7 +79,7 @@ const ProjectsPage = () => {
             className="iconify"
             data-icon="logos:javascript"
             data-inline="false"
-            style={{ fontSize: "1.6rem", margin: "0 0.35rem" }}
+            style={{ fontSize: "1.6rem" }}
         />
     );
 
@@ -87,7 +88,7 @@ const ProjectsPage = () => {
             className="iconify"
             data-icon="vscode-icons:file-type-html"
             data-inline="false"
-            style={{ fontSize: "1.7rem", margin: "0 0.35rem" }}
+            style={{ fontSize: "1.7rem" }}
         />
     );
 
@@ -96,7 +97,7 @@ const ProjectsPage = () => {
             className="iconify"
             data-icon="vscode-icons:file-type-css"
             data-inline="false"
-            style={{ fontSize: "1.7rem", margin: "0 0.35rem" }}
+            style={{ fontSize: "1.7rem" }}
         />
     );
 
@@ -105,7 +106,7 @@ const ProjectsPage = () => {
             className="iconify"
             data-icon="logos:java"
             data-inline="false"
-            style={{ fontSize: "1.7rem", margin: "0 0.35rem 0 0" }}
+            style={{ fontSize: "1.7rem" }}
         />
     );
 
@@ -114,7 +115,7 @@ const ProjectsPage = () => {
             className="iconify"
             data-icon="logos:python"
             data-inline="false"
-            style={{ fontSize: "1.7rem", margin: "0 0.35rem 0 0" }}
+            style={{ fontSize: "1.7rem" }}
         ></span>
     );
 
@@ -125,7 +126,6 @@ const ProjectsPage = () => {
             style={{
                 width: "1.7rem",
                 height: "1.7rem",
-                margin: "0 0.35rem 0 0",
             }}
         />
     );
@@ -137,7 +137,17 @@ const ProjectsPage = () => {
             style={{
                 width: "1.7rem",
                 height: "1.7rem",
-                margin: "0 0.35rem 0 0",
+            }}
+        />
+    );
+
+    const cPlusPlusIcon = (
+        <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+            alt="C++ Icon"
+            style={{
+                width: "1.7rem",
+                height: "1.7rem",
             }}
         />
     );
@@ -181,6 +191,7 @@ const ProjectsPage = () => {
         <Box className={classes.icons}>
             {javaIcon}
             {javascriptIcon}
+            {cPlusPlusIcon}
         </Box>
     );
 
@@ -256,7 +267,7 @@ const ProjectsPage = () => {
                 title="Academic Projects"
                 icons={academicProjectsIcons}
                 description="A collection of videos and descriptions of some of my recent academic projects, completed during my third year of studies. Includes artifical intelligence and image processing projects."
-                image={pathfindingScreenshot}
+                image={academicProjectScreenshot}
                 imageTitle="Pathfinding using A* Heuristic Search screenshot"
                 route="/academic-projects"
                 buttonText="Link"

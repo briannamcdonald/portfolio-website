@@ -84,6 +84,17 @@ const AcademicProjectsPage = () => {
     />
   );
 
+  const cPlusPlusIcon = (
+    <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+        alt="C++ Icon"
+        style={{
+            width: "2rem",
+            height: "2rem",
+        }}
+    />
+  );
+
   return (
     <Box className={classes.columnDiv} id="Projects">
       <AcademicProjectsNavBar />
@@ -180,6 +191,35 @@ const AcademicProjectsPage = () => {
               Additionally, right-clicking shows all the nodes that an object of
               the selected size can reach from the current node, represented by
               pink squares.
+            </Typography>
+            <Typography>
+              {" "}
+              The GUI was created by{" "}
+              <a
+                className={classes.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                href="http://www.cs.mun.ca/~dchurchill/"
+              >
+                David Churchill
+              </a>
+              .
+            </Typography>
+          </Box>
+        }
+      />
+      <AcademicProject
+        title="Navigation Mesh"
+        icons={cPlusPlusIcon}
+        link="https://www.youtube.com/embed/_sNa101-P3I"
+        description={
+          <Box className={classes.box}>
+            <Typography className={classes.descriptionText}>
+            In this project, I calculate a navigation mesh every iteration that uses 3 grids: a grid of blocked/unblocked cells, a distance map grid, and a vector field/direction grid.
+            </Typography>
+            <Typography className={classes.descriptionText}>
+              {" "}
+              The yellow square is the goal that can be set at any position on the grid. The red rectangles represent blocked cells and they can be moved, added, and resized while the nav mesh will update around them dynamically. Lastly, the blue circles are the agents that spawn in random locations on the grid and move to the goal using the shortest path calculated by the nav mesh.{" "}
             </Typography>
             <Typography>
               {" "}
