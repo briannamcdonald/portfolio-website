@@ -260,8 +260,9 @@ const ProjectsPage = () => {
                 description="A website that allows you to compare COVID-19 and economic data from each of the provinces of Canada or Canada as a whole. Created using Reactjs and Chakra UI for the front-end and Nodejs and MongoDB for the back-end."
                 image={covidGif}
                 imageTitle="COVID-19 & Economic Tracker screenshot"
-                link1=""
+                link1="https://github.com/briannamcdonald/covid-19-and-economic-tracker"
                 link2=""
+                buttonText1="GitHub"
             />
             <RoutingProject
                 title="Academic Projects"
