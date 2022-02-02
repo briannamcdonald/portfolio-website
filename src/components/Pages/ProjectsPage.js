@@ -213,7 +213,7 @@ const ProjectsPage = () => {
             <Project
                 title="NL Life - 2nd Place Winner at Hack Frost NL Hackathon&nbsp;🥈"
                 icons={calculatorIcons}
-                description="A demo virtual tourism platform for Newfoundland. Created using Reactjs for the Hack Frost NL Hackathon in 2020 where my team came in 2nd place out of 30+ teams."
+                description="A demo virtual tourism platform for Newfoundland. Created using Reactjs for the Hack Frost NL Hackathon in 2021 where my team came in 2nd place out of 30+ teams."
                 image={hackFrostGif}
                 imageTitle="Hack Frost Demo screenshot"
                 link1="https://nl-life.vercel.app/"
