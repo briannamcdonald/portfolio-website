@@ -77,11 +77,6 @@ const AboutPage = () => {
     });
     const classes = useStyles();
 
-    const scrollToProjects = () => {
-        const element = document.getElementById("Projects");
-        element.scrollIntoView({ behavior: "smooth" });
-    };
-
     return (
         <div>
             <Box

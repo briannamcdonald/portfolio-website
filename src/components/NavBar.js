@@ -11,9 +11,11 @@ import {
   ListItem,
   ListItemText,
   Box,
+  Link,
   makeStyles,
 } from "@material-ui/core";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
+import resumePdf from "../documents/BriannaMcDonaldResume.pdf";
 
 const NavBar = () => {
   const useStyles = makeStyles({
@@ -78,6 +80,13 @@ const NavBar = () => {
 
   const appBarButtons = (
     <Box className={classes.div}>
+      <Link
+        href={resumePdf}
+        target="_blank"
+        style={{ textDecoration: "none" }}
+      >
+        <Button className={classes.button}>Resume</Button>
+      </Link>
       <Button className={classes.button} onClick={() => scrollTo("AboutMe")}>
         About Me
       </Button>
@@ -105,6 +114,12 @@ const NavBar = () => {
         }}
       >
         <List onClick={handleDrawerToggle}>
+          <ListItem button component="a" target="_blank" key="Resume" href={resumePdf}>
+            <ListItemText
+                primary="RESUME"
+                classes={{ primary: classes.listItemText }}
+              />
+          </ListItem>
           {["ABOUT ME", "PROJECTS", "CONTACT"].map((text, index) => (
             <ListItem
               button
@@ -135,8 +150,8 @@ const NavBar = () => {
             ✨
           </span>
         </Typography>
-        <Hidden xsDown>{appBarButtons}</Hidden>
-        <Hidden smUp>{sideDrawer}</Hidden>
+        <Hidden smDown>{appBarButtons}</Hidden>
+        <Hidden mdUp>{sideDrawer}</Hidden>
       </Toolbar>
     </AppBar>
   );
