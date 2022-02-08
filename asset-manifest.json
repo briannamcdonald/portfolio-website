@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.3a65ec82.chunk.css",
-    "main.js": "/portfolio-website/static/js/main.05748926.chunk.js",
-    "main.js.map": "/portfolio-website/static/js/main.05748926.chunk.js.map",
+    "main.js": "/portfolio-website/static/js/main.ccf1bddd.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.ccf1bddd.chunk.js.map",
     "runtime-main.js": "/portfolio-website/static/js/runtime-main.c16362e1.js",
     "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.c16362e1.js.map",
     "static/js/2.511280d4.chunk.js": "/portfolio-website/static/js/2.511280d4.chunk.js",
     "static/js/2.511280d4.chunk.js.map": "/portfolio-website/static/js/2.511280d4.chunk.js.map",
     "index.html": "/portfolio-website/index.html",
-    "precache-manifest.0d162f95ce9beb6d4762e669c69a1522.js": "/portfolio-website/precache-manifest.0d162f95ce9beb6d4762e669c69a1522.js",
+    "precache-manifest.96c990113da7501fd52b5fe1c78ce6df.js": "/portfolio-website/precache-manifest.96c990113da7501fd52b5fe1c78ce6df.js",
     "service-worker.js": "/portfolio-website/service-worker.js",
     "static/css/main.3a65ec82.chunk.css.map": "/portfolio-website/static/css/main.3a65ec82.chunk.css.map",
     "static/js/2.511280d4.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.511280d4.chunk.js.LICENSE.txt",
@@ -23,7 +23,7 @@
     "static/media/covidGif.gif": "/portfolio-website/static/media/covidGif.9ec3576b.gif",
     "static/media/cssart.jpg": "/portfolio-website/static/media/cssart.949a49b4.jpg",
     "static/media/gdmcGif.gif": "/portfolio-website/static/media/gdmcGif.0887e2e7.gif",
-    "static/media/hackFrostGif.gif": "/portfolio-website/static/media/hackFrostGif.20d149a4.gif",
+    "static/media/hackFrostGif.gif": "/portfolio-website/static/media/hackFrostGif.e2cf43dd.gif",
     "static/media/picture.jpg": "/portfolio-website/static/media/picture.6f7de017.jpg",
     "static/media/sqliteLogo.png": "/portfolio-website/static/media/sqliteLogo.7600ca43.png",
     "static/media/thresholdingScreenshot.png": "/portfolio-website/static/media/thresholdingScreenshot.52b67810.png"
@@ -32,6 +32,6 @@
     "static/js/runtime-main.c16362e1.js",
     "static/js/2.511280d4.chunk.js",
     "static/css/main.3a65ec82.chunk.css",
-    "static/js/main.05748926.chunk.js"
+    "static/js/main.ccf1bddd.chunk.js"
   ]
 }
