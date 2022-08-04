@@ -79,7 +79,7 @@ const AboutPage = () => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div style={{ backgroundColor: "#fcf8f8" }}>
       <Box className={`${classes.columnDiv} ${classes.mainDiv}`} id="AboutMe">
         <Typography className={`${classes.aboutText} ${classes.headerText}`}>
           About Me
@@ -98,7 +98,16 @@ const AboutPage = () => {
         </Typography>
         <Typography className={classes.bodyText}>
           {" "}
-          I'm currently doing an internship at{" "}
+          I'm currently working at{" "}
+          <Link
+            href="https://getmysa.com/?country=CA"
+            target="_blank"
+            className={classes.link}
+            underline="none"
+          >
+            Mysa
+          </Link>{" "}
+          as an embedded software developer. I previously worked at{" "}
           <Link
             href="https://www.compusult.com/"
             target="_blank"
@@ -107,19 +116,28 @@ const AboutPage = () => {
           >
             Compusult Limited
           </Link>{" "}
-          where I'm working on projects related to AI, computer vision, software
-          development, and full stack web development. I also have eight months
-          of previous experience as a front-end web developer and I like
-          creating my own programming projects in my spare time.{" "}
+          where I worked on projects related to AI, computer vision, and full
+          stack web development. I was also a front-end web developer for{" "}
           <Link
-            href={resumePdf}
+            href="https://nleats.com/"
             target="_blank"
             className={classes.link}
             underline="none"
           >
-            Click here to view my full resume.
+            NL Eats
           </Link>
+          .{" "}
         </Typography>
+        {/* <Typography className={classes.bodyText}>
+                    <Link
+                        href={resumePdf}
+                        target="_blank"
+                        className={classes.link}
+                        underline="none"
+                    >
+                        Click here to view my full resume.
+                    </Link>
+                </Typography> */}
         <Box
           component="img"
           src={picture}

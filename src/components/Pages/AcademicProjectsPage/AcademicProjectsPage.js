@@ -86,17 +86,21 @@ const AcademicProjectsPage = () => {
 
   const cPlusPlusIcon = (
     <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-        alt="C++ Icon"
-        style={{
-            width: "2rem",
-            height: "2rem",
-        }}
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+      alt="C++ Icon"
+      style={{
+        width: "2rem",
+        height: "2rem",
+      }}
     />
   );
 
   return (
-    <Box className={classes.columnDiv} id="Projects">
+    <Box
+      className={classes.columnDiv}
+      style={{ backgroundColor: "#fcf8f8" }}
+      id="Projects"
+    >
       <AcademicProjectsNavBar />
       <Typography className={classes.headerText}>Academic Projects</Typography>
       <Divider className={classes.divider} />
@@ -215,11 +219,18 @@ const AcademicProjectsPage = () => {
         description={
           <Box className={classes.box}>
             <Typography className={classes.descriptionText}>
-            In this project, I calculate a navigation mesh every iteration that uses 3 grids: a grid of blocked/unblocked cells, a distance map grid, and a vector field/direction grid.
+              In this project, I calculate a navigation mesh every iteration
+              that uses 3 grids: a grid of blocked/unblocked cells, a distance
+              map grid, and a vector field/direction grid.
             </Typography>
             <Typography className={classes.descriptionText}>
               {" "}
-              The yellow square is the goal that can be set at any position on the grid. The red rectangles represent blocked cells and they can be moved, added, and resized while the nav mesh will update around them dynamically. Lastly, the blue circles are the agents that spawn in random locations on the grid and move to the goal using the shortest path calculated by the nav mesh.{" "}
+              The yellow square is the goal that can be set at any position on
+              the grid. The red rectangles represent blocked cells and they can
+              be moved, added, and resized while the nav mesh will update around
+              them dynamically. Lastly, the blue circles are the agents that
+              spawn in random locations on the grid and move to the goal using
+              the shortest path calculated by the nav mesh.{" "}
             </Typography>
             <Typography>
               {" "}

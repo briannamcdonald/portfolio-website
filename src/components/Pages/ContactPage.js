@@ -21,7 +21,6 @@ const ContactPage = () => {
       backgroundColor: "rgba(0, 0, 0, 0.92)",
       position: "relative",
       bottom: "0",
-      marginTop: "5rem",
       paddingTop: "1rem",
       paddingBottom: "0.6rem",
     },
@@ -132,7 +131,9 @@ const ContactPage = () => {
         Contact Me
       </Typography>
       <Divider
-        classes={{ root: `${classes.divider} ${classes.contactDivider}` }}
+        classes={{
+          root: `${classes.divider} ${classes.contactDivider}`,
+        }}
       />
       <Box className={classes.rowDiv}>
         <Typography className={classes.emailText}>

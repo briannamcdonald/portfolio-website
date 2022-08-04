@@ -80,13 +80,6 @@ const NavBar = () => {
 
   const appBarButtons = (
     <Box className={classes.div}>
-      <Link
-        href={resumePdf}
-        target="_blank"
-        style={{ textDecoration: "none" }}
-      >
-        <Button className={classes.button}>Resume</Button>
-      </Link>
       <Button className={classes.button} onClick={() => scrollTo("AboutMe")}>
         About Me
       </Button>
@@ -96,6 +89,14 @@ const NavBar = () => {
       <Button className={classes.button} onClick={() => scrollTo("Contact")}>
         Contact
       </Button>
+      <Link href={resumePdf} target="_blank" style={{ textDecoration: "none" }}>
+        <Button
+          className={classes.button}
+          style={{ border: "1px solid black" }}
+        >
+          Resume
+        </Button>
+      </Link>
     </Box>
   );
 
@@ -114,11 +115,17 @@ const NavBar = () => {
         }}
       >
         <List onClick={handleDrawerToggle}>
-          <ListItem button component="a" target="_blank" key="Resume" href={resumePdf}>
+          <ListItem
+            button
+            component="a"
+            target="_blank"
+            key="Resume"
+            href={resumePdf}
+          >
             <ListItemText
-                primary="RESUME"
-                classes={{ primary: classes.listItemText }}
-              />
+              primary="RESUME"
+              classes={{ primary: classes.listItemText }}
+            />
           </ListItem>
           {["ABOUT ME", "PROJECTS", "CONTACT"].map((text, index) => (
             <ListItem
