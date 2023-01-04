@@ -16,6 +16,7 @@ import {
 } from "@material-ui/core";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import resumePdf from "../documents/BriannaMcDonaldResume.pdf";
+import theme from "./../theme/theme.js";
 
 const NavBar = () => {
   const useStyles = makeStyles({
@@ -29,9 +30,12 @@ const NavBar = () => {
       color: "black",
     },
     drawerPaper: {
-      width: "60%",
-      backgroundColor: "#eeeeee",
+      width: "75%",
+      backgroundColor: "#e5ffff",
       color: "black",
+      justifyContent: "center",
+      alignItems: "center",
+      display: "flex",
     },
     button: {
       background: "inherit",
@@ -40,7 +44,23 @@ const NavBar = () => {
       height: 40,
       padding: "0 1rem",
       margin: "0 0.5rem",
-      fontSize: "0.9rem",
+      [theme.breakpoints.down("xl")]: {
+        fontSize: "1rem",
+      },
+      [theme.breakpoints.down("md")]: {
+        fontSize: "0.9rem",
+      },
+      [theme.breakpoints.down("sm")]: {
+        margin: "1rem 0"
+      },
+    },
+    outlinedButton: {
+      [theme.breakpoints.down("xl")]: {
+        border: "2px solid black",
+      },
+      [theme.breakpoints.down("md")]: {
+        border: "1px solid black",
+      },
     },
     text: {
       fontSize: "1.2rem",
@@ -51,6 +71,9 @@ const NavBar = () => {
     listItemText: {
       fontSize: "0.9rem",
       fontWeight: "500",
+      alignItems: "center",
+      justifyContent: "center",
+      display: "flex"
     },
   });
   const classes = useStyles();
@@ -91,8 +114,7 @@ const NavBar = () => {
       </Button>
       <Link href={resumePdf} target="_blank" style={{ textDecoration: "none" }}>
         <Button
-          className={classes.button}
-          style={{ border: "1px solid black" }}
+          className={`${classes.button} ${classes.outlinedButton}`}
         >
           Resume
         </Button>
@@ -115,24 +137,13 @@ const NavBar = () => {
         }}
       >
         <List onClick={handleDrawerToggle}>
-          <ListItem
-            button
-            component="a"
-            target="_blank"
-            key="Resume"
-            href={resumePdf}
-          >
-            <ListItemText
-              primary="RESUME"
-              classes={{ primary: classes.listItemText }}
-            />
-          </ListItem>
           {["ABOUT ME", "PROJECTS", "CONTACT"].map((text, index) => (
             <ListItem
               button
               component="a"
               key={text}
               href={"#" + getLink(text)}
+              className={classes.button}
             >
               <ListItemText
                 primary={text}
@@ -140,6 +151,19 @@ const NavBar = () => {
               />
             </ListItem>
           ))}
+          <ListItem
+            button
+            component="a"
+            target="_blank"
+            key="Resume"
+            href={resumePdf}
+            className={`${classes.button} ${classes.outlinedButton}`}
+          >
+            <ListItemText
+              primary="RESUME"
+              classes={{ primary: classes.listItemText }}
+            />
+          </ListItem>
         </List>
       </Drawer>
       <IconButton onClick={handleDrawerToggle}>
