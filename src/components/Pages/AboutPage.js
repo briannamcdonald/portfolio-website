@@ -3,7 +3,6 @@ import { Box, Typography, Divider, Link, makeStyles } from "@material-ui/core";
 import theme from "../../theme/theme";
 import * as styles from "../../theme/commonStyles";
 import picture from "./../../images/picture.jpg";
-import resumePdf from "../../documents/BriannaMcDonaldResume.pdf";
 
 import SkillsPage from "./SkillsPage.js";
 
@@ -17,7 +16,7 @@ const AboutPage = () => {
         width: "45%",
       },
       [theme.breakpoints.down("lg")]: {
-        width: "50%",
+        width: "60%",
       },
       [theme.breakpoints.down("md")]: {
         width: "60%",
@@ -78,6 +77,14 @@ const AboutPage = () => {
   });
   const classes = useStyles();
 
+  const scrollTo = (id) => {
+    console.log(id);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div style={{ backgroundColor: "#fcf8f8" }}>
       <Box className={`${classes.columnDiv} ${classes.mainDiv}`} id="AboutMe">
@@ -88,7 +95,7 @@ const AboutPage = () => {
         <Typography className={classes.bodyText}>
           My name is <b>Brianna McDonald</b> and I'm a fourth year Computer
           Science Honours student at Memorial University living in Newfoundland,
-          Canada.{" "}
+          Canada. I will be graduating in April 2023.{" "}
         </Typography>
         <Typography className={classes.bodyText}>
           {" "}
@@ -98,7 +105,7 @@ const AboutPage = () => {
         </Typography>
         <Typography className={classes.bodyText}>
           {" "}
-          I'm currently working at{" "}
+          I worked at{" "}
           <Link
             href="https://getmysa.com/?country=CA"
             target="_blank"
@@ -107,7 +114,7 @@ const AboutPage = () => {
           >
             Mysa
           </Link>{" "}
-          as an embedded software developer. I previously worked at{" "}
+          as an embedded software developer. I also previously worked at{" "}
           <Link
             href="https://www.compusult.com/"
             target="_blank"
@@ -117,7 +124,15 @@ const AboutPage = () => {
             Compusult Limited
           </Link>{" "}
           where I worked on projects related to AI, computer vision, and full
-          stack web development. I was also a front-end web developer for{" "}
+          stack web development (including the award-winning{" "}
+          <Link
+            onClick={() => scrollTo("PRIMS")}
+            className={classes.link}
+            underline="none"
+          >
+            Parkinson's Remote Interactive Monitoring System
+          </Link>
+          ). Additionally, I was a front-end web developer for{" "}
           <Link
             href="https://nleats.com/"
             target="_blank"
@@ -128,16 +143,6 @@ const AboutPage = () => {
           </Link>
           .{" "}
         </Typography>
-        {/* <Typography className={classes.bodyText}>
-                    <Link
-                        href={resumePdf}
-                        target="_blank"
-                        className={classes.link}
-                        underline="none"
-                    >
-                        Click here to view my full resume.
-                    </Link>
-                </Typography> */}
         <Box
           component="img"
           src={picture}

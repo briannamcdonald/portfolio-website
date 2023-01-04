@@ -106,8 +106,36 @@ const AcademicProjectsPage = () => {
       <Divider className={classes.divider} />
       <Typography className={classes.text}>
         A collection of videos and descriptions of some of my recent academic
-        projects, completed during my third year of studies.
+        projects, completed during my third and fourth years of studies.
       </Typography>
+      <AcademicProject
+        title="Guns of Labyrinth"
+        icons={cPlusPlusIcon}
+        link="https://www.youtube.com/embed/0c387ewncUQ"
+        description={
+          <Box className={classes.box}>
+            <Typography className={classes.descriptionText}>
+              A medieval themed top-down shooter game where you fight hoards of
+              enemies in a frantic bullet-hell. Created using C++ and SFML as a
+              final group project for a video game development course.
+            </Typography>
+          </Box>
+        }
+      />
+      <AcademicProject
+        title="Mega Mario"
+        icons={cPlusPlusIcon}
+        link="https://www.youtube.com/embed/OcpJJ874MWs"
+        description={
+          <Box className={classes.box}>
+            <Typography className={classes.descriptionText}>
+              A 2D platformer based on Super Mario Bros and Mega Man. It also
+              contains drag and drop functionality where the player and pick up
+              and move blocks within the level with their mouse.
+            </Typography>
+          </Box>
+        }
+      />
       <AcademicProject
         title="Pathfinding using Q-Learning"
         icons={javascriptIcon}
@@ -266,10 +294,6 @@ const AcademicProjectsPage = () => {
               Selection Thresholding, Otsu's Method, and the Adaptive Mean-C
               Approach. It also displays the histogram of the given image plus a
               bar representing the threshold value.{" "}
-            </Typography>
-            <Typography>
-              {" "}
-              The GUI along with some skeleton code was provided.
             </Typography>
           </Box>
         }
