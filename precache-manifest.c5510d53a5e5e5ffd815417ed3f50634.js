@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b3c505e05908285fd38ba64d02199645",
+    "revision": "88fd8cc2a4641e0dd916e07b2dff30aa",
     "url": "/portfolio-website/index.html"
   },
   {
-    "revision": "6319e63d310aa840eac1",
-    "url": "/portfolio-website/static/css/main.3a65ec82.chunk.css"
+    "revision": "a4e73bf99fb20f6eae83",
+    "url": "/portfolio-website/static/css/main.239fc7fd.chunk.css"
   },
   {
     "revision": "1cccccd9e60b5d773b7c",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-website/static/js/2.3d8f48c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6319e63d310aa840eac1",
-    "url": "/portfolio-website/static/js/main.98d2929c.chunk.js"
+    "revision": "a4e73bf99fb20f6eae83",
+    "url": "/portfolio-website/static/js/main.40be8d60.chunk.js"
   },
   {
     "revision": "99cb685b86efd0f580da",
@@ -42,10 +42,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a4ec4d6f0a6b25b1092cea35fd4718bc",
     "url": "/portfolio-website/static/media/ToDoListGif.a4ec4d6f.gif"
-  },
-  {
-    "revision": "7567d78c177c9a8de109b86320617d8c",
-    "url": "/portfolio-website/static/media/academicProjectScreenshot.7567d78c.png"
   },
   {
     "revision": "cb184cd7127167ffbb251bac975b4394",
@@ -78,6 +74,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ea7076dfdd6ae3a8c9867a127f7720da",
     "url": "/portfolio-website/static/media/honours.ea7076df.gif"
+  },
+  {
+    "revision": "ae2e9e737ad76275de0f1e7b74ea626a",
+    "url": "/portfolio-website/static/media/megaMarioScreenshot.ae2e9e73.png"
   },
   {
     "revision": "6f7de017e040068b0bbdf3f349295b41",
