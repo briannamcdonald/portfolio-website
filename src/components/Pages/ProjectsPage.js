@@ -12,7 +12,7 @@ import Project from "./../Project";
 import RoutingProject from "./../RoutingProject";
 import toDoListGif from "./../../images/ToDoListGif.gif";
 import babyLizardsScreenshot from "./../../images/BabyLizardsScreenshot.png";
-import academicProjectScreenshot from "./../../images/academicProjectScreenshot.png";
+import academicProjectScreenshot from "./../../images/megaMarioScreenshot.png";
 import sobelScreenshot from "./../../images/SobelScreenshot.png";
 import calculatorGif from "./../../images/calculatorGif.gif";
 import cssArtScreenshot from "./../../images/cssart.jpg";
@@ -354,8 +354,8 @@ const ProjectsPage = () => {
           <div style={{ lineHeight: "1.2em" }}>
             A data visualization application that allows you to compare COVID-19
             and economic data from each of the provinces of Canada or Canada as
-            a whole. Created using Reactjs and Chakra UI for the front-end and
-            Nodejs and MongoDB for the back-end.
+            a whole. Created using the MERN stack (MongoDB, Express, Reactjs,
+            and Nodejs).
           </div>
         }
         image={covidGif}
