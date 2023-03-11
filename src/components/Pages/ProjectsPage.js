@@ -304,7 +304,7 @@ const ProjectsPage = () => {
         }
         image={primsGif}
         imageTitle="PRIMS gif"
-        link1="https://www.pragmaclin.com/prims-software"
+        link1="https://www.pragmaclin.com/prims"
         link2="https://www.cbc.ca/news/canada/newfoundland-labrador/pragmaclin-wins-mel-woodward-cup-1.6398356"
         buttonText1="PRIMS Website"
         buttonText2="CBC Article"
