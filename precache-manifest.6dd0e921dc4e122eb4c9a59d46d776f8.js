@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7cd839300d597709a1f616a7f25dd206",
+    "revision": "86235213ae7f56197b390839c8615620",
     "url": "/portfolio-website/index.html"
   },
   {
-    "revision": "b4d84fab1d5306daba6d",
-    "url": "/portfolio-website/static/css/main.239fc7fd.chunk.css"
+    "revision": "2ce1551d39dbae84644c",
+    "url": "/portfolio-website/static/css/main.3a65ec82.chunk.css"
   },
   {
     "revision": "1cccccd9e60b5d773b7c",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-website/static/js/2.3d8f48c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b4d84fab1d5306daba6d",
-    "url": "/portfolio-website/static/js/main.3f06a8c4.chunk.js"
+    "revision": "2ce1551d39dbae84644c",
+    "url": "/portfolio-website/static/js/main.1779919a.chunk.js"
   },
   {
     "revision": "99cb685b86efd0f580da",
@@ -80,8 +80,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-website/static/media/megaMarioScreenshot.ae2e9e73.png"
   },
   {
-    "revision": "6f7de017e040068b0bbdf3f349295b41",
-    "url": "/portfolio-website/static/media/picture.6f7de017.jpg"
+    "revision": "a1568f561c19be19611e7d4c83161d18",
+    "url": "/portfolio-website/static/media/picture.a1568f56.jpg"
   },
   {
     "revision": "3f2dee47766e427f2ab91c6b3319a692",
