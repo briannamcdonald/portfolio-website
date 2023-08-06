@@ -119,9 +119,8 @@ const FrontPage = () => {
             <Typography className={classes.bottomText} align="center">
                 <ReactRotatingText
                     items={[
-                        "Computer Science Student ",
-                        "Full Stack Web Developer ",
                         "Software Developer ",
+                        "Full Stack Web Developer ",
                         "AI Enthusiast ",
                     ]}
                     pause={800}

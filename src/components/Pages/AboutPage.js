@@ -93,19 +93,31 @@ const AboutPage = () => {
         </Typography>
         <Divider classes={{ root: classes.divider }} />
         <Typography className={classes.bodyText}>
-          My name is <b>Brianna McDonald</b> and I'm a fourth year Computer
-          Science Honours student at Memorial University living in Newfoundland,
-          Canada. I will be graduating in April 2023.{" "}
+          My name is <b>Brianna McDonald</b> and I'm a Software Developer living
+          in Newfoundland, Canada. I'm currently working at{" "}
+          <Link
+            href="https://www.virtualmarine.ca/"
+            target="_blank"
+            className={classes.link}
+            underline="none"
+          >
+            Virtual Marine
+          </Link>{" "}
+          developing a decision support system that uses machine learning
+          algorithms on data collected from training simulators, sensors, and
+          weather forecasts to provide data-driven insights and predictions to
+          operators of marine vessels.{" "}
         </Typography>
         <Typography className={classes.bodyText}>
           {" "}
-          I really enjoy programmming and love to be always learning something
-          new. I have a strong work ethic, as shown by my 4.0 GPA, and I can
-          quickly pick up on new technologies.{" "}
+          I recently graduated with an Honours Computer Science degree from
+          Memorial University and I have 2+&nbsp;years of professional
+          development experience in total. I have a strong work ethic, as shown
+          by my 4.0 GPA, and I love to always be learning something new.{" "}
         </Typography>
         <Typography className={classes.bodyText}>
           {" "}
-          I worked at{" "}
+          In the past, I worked at{" "}
           <Link
             href="https://getmysa.com/?country=CA"
             target="_blank"
