@@ -103,17 +103,16 @@ const AboutPage = () => {
           >
             Virtual Marine
           </Link>{" "}
-          developing a decision support system that uses machine learning
-          algorithms on data collected from training simulators, sensors, and
-          weather forecasts to provide data-driven insights and predictions to
-          operators of marine vessels.{" "}
+          developing a decision support system that integrates data from marine
+          training simulators and weather forecasts to provide data-driven insights 
+          and advanced data visualizations.{" "}
         </Typography>
         <Typography className={classes.bodyText}>
           {" "}
-          I recently graduated with an Honours Computer Science degree from
-          Memorial University and I have 2+&nbsp;years of professional
-          development experience in total. I have a strong work ethic, as shown
-          by my 4.0 GPA, and I love to always be learning something new.{" "}
+          I have multiple years of industry experience as a Developer and an 
+          {" "}Honours Computer Science degree from Memorial University. I have a 
+          strong work ethic, as shown by my 4.0 GPA, and I love to always be learning 
+          something new.{" "}
         </Typography>
         <Typography className={classes.bodyText}>
           {" "}
