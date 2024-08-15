@@ -102,10 +102,8 @@ const AboutPage = () => {
             underline="none"
           >
             Virtual Marine
-          </Link>{" "}
-          developing a decision support system that integrates data from marine
-          training simulators and weather forecasts to provide data-driven insights 
-          and advanced data visualizations.{" "}
+          </Link>,{" "}
+          leading research projects focused on enhancing the capabilities of marine simulators using machine learning.{" "}
         </Typography>
         <Typography className={classes.bodyText}>
           {" "}

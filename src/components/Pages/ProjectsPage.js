@@ -268,25 +268,20 @@ const ProjectsPage = () => {
       <Typography className={classes.headerText}>Projects</Typography>
       <Divider className={classes.divider} />
       <Project
-        title="SmartVR Pointer: Using Image-Based Tracking for Smartphone-Based Interaction in Virtual Reality"
+        title="SmartVR Pointer: Using Smartphones and Gaze Orientation for Selection and Navigation in Virtual Reality"
         icons={vrIcons}
         description={
           <div style={{ lineHeight: "1.2em" }}>
-            For my Honours project, I implemented a technique that allows the
-            user to interact with objects within virtual reality (VR) using
-            touch screen and tilt controls on their smartphone. <br />
-            <br /> I also developed two example applications to test its
-            usability, including a navigation demo where the user can navigate
-            using teleport points as well as a Tetris key-and-lock mechanism
-            application.
+            Implemented a technique that allows the user to interact with objects within virtual reality (VR) using touch screen and tilt controls on their smartphone. I also developed two demo applications which involve navigation in a virtual environment and a Tetris-inspired key-and-lock mechanism.
+            <br /><br />An article detailing this technique and the results from a user study conducted with it was published by the Multidisciplinary Digital Publishing Institute (MDPI).
           </div>
         }
         image={honoursGif}
         imageTitle="SmartVR Pointer gif"
-        link1={honoursDissertation}
+        link1="https://www.mdpi.com/1424-8220/24/16/5168"
         link2="https://drive.google.com/drive/folders/1KgzVXKlIRy6nN61HkxM8ihh7-UNvebQF?usp=sharing"
-        buttonText1="Honours Dissertation PDF"
-        buttonText2="Project Link"
+        buttonText1="MDPI Article"
+        buttonText2="Project Code"
       />
       <Project
         title="Parkinson's Remote Interactive Monitoring System (PRIMS)"
