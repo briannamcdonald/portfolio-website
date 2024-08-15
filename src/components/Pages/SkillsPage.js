@@ -150,7 +150,7 @@ const NewSkillsPage = () => {
   const aws = (
     <SkillBox
       title="AWS"
-      link="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+      link="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
     />
   );
   const bash = (
